@@ -1,0 +1,62 @@
+.home_screen-main-cont {
+  padding: 16rem 8rem;
+}
+.home_hero_main_cont {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 13.6rem;
+}
+.hero_intro_text-cont {
+  width: 76rem;
+}
+.hero_intro_text-cont h1 {
+  font-size: 7.6rem;
+}
+.hero_intro_text {
+  font-size: 3rem;
+  font-family: EuclidFlexLight;
+  font-weight: 300;
+}
+.hero_intro_text span {
+  color: var(--logo-green);
+  cursor: pointer;
+  position: relative;
+  background-color: var(--menu-white);
+}
+/*  */
+.hero_avatar {
+  z-index: -2;
+  transition: all 0.5s cubic-bezier(1, 1.2, 0.74, 1.32);
+}
+.hero_intro_text span img {
+  position: absolute;
+  top: -265%;
+  left: -265%;
+  pointer-events: none;
+}
+.hero_logo_main-cont {
+  position: relative;
+}
+
+.hero-colored-logo {
+  z-index: 0;
+  position: absolute;
+  left: 0;
+  top: 25%;
+  opacity: 0;
+  pointer-events: none;
+  /* transition: all 1s cubic-bezier(0.18, 0.35, 0, 1.29); */
+  transition: all 0.5s ease;
+}
+.hero-base-logo {
+}
+.hero-hover-here {
+  position: absolute;
+  right: -10rem;
+  top: -3rem;
+}
+.hero-base-logo:hover + .hero-colored-logo {
+  top: -5%;
+
+  opacity: 1;
+}

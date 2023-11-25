@@ -1,0 +1,66 @@
+::-moz-selection {
+  /* Code for Firefox */
+  color: red;
+  background: yellow;
+}
+
+::selection {
+  color: var(--menu-white);
+  background: var(--logo-green);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+}
+
+/* Regular */
+@font-face {
+  font-family: "EuclidFlexRegular";
+  src: url("assets/fonts/EuclidFlexRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "EuclidFlexBold";
+  src: url("assets/fonts/EuclidFlexBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Semi-Bold */
+@font-face {
+  font-family: "EuclidFlexSemiBold";
+  src: url("assets/fonts/EuclidFlexSemiBold.ttf") format("truetype");
+  font-weight: 600; /* Adjust the value according to the font's specific weight */
+  font-style: normal;
+}
+
+/* Light */
+@font-face {
+  font-family: "EuclidFlexLight";
+  src: url("assets/fonts/EuclidFlexLight.ttf") format("truetype");
+  font-weight: 300; /* Adjust the value according to the font's specific weight */
+  font-style: normal;
+}
+@font-face {
+  font-family: "EuclidSquareRegular";
+  src: url("assets/fonts/EuclidSquareRegular.ttf") format("truetype");
+  font-weight: 300; /* Adjust the value according to the font's specific weight */
+  font-style: normal;
+}
+
+body {
+  font-family: "EuclidFlexRegular", sans-serif; /* Use the regular font as default */
+}
