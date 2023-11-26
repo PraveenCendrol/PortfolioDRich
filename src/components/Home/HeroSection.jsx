@@ -3,6 +3,7 @@ import content from "../../assets/content";
 import ArrowLinkHover from "../Generic/ArrowLinkHover";
 import clickHere from "../../assets/svgs/clickHere.svg";
 import hoverHere from "../../assets/svgs/hoverHere.svg";
+import tracer from "../../assets/svgs/tracer.svg";
 export default function HeroSection() {
   const [imageVisible, setImageVisible] = useState(false);
   const [hover, setHover] = useState(false);
@@ -29,7 +30,7 @@ export default function HeroSection() {
               className="hero_avatar"
               style={{ top: imageVisible ? "-12rem" : "1.5rem", left: "-3rem" }}
             />
-            <div
+            <span
               style={{
                 backgroundColor: "var(--menu-white)",
                 height: "18rem",
@@ -58,6 +59,7 @@ export default function HeroSection() {
           className="hero-base-logo"
         />
         <img src={content.heroColoredLogo} className="hero-colored-logo" />
+        <img src={tracer} className="customelement" />
       </div>
     </div>
   );

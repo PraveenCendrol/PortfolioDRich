@@ -1,7 +1,7 @@
 ::-moz-selection {
   /* Code for Firefox */
-  color: red;
-  background: yellow;
+  color: var(--menu-white);
+  background: var(--logo-green);
 }
 
 ::selection {
@@ -17,10 +17,17 @@
 
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-size: 1.6rem;
+}
+/* Hide scroll bar without glitch */
+.body-scroll-lock {
+  position: fixed;
+  overflow-y: scroll;
+  width: 100%;
 }
 
 /* Regular */

@@ -18,7 +18,11 @@ const ArrowSvg = ({ size = 24, fill = "#1C1B1F", ...props }) => {
     </svg>
   );
 };
-export default function ArrowLinkHover({ label = "", additionalStyles = {} }) {
+export default function ArrowLinkHover({
+  label = "",
+  additionalStyles = {},
+  color = "black",
+}) {
   const [mouse, setMouse] = useState(false);
   const onMouseEvent = () => {
     setMouse((e) => !e);
@@ -41,15 +45,18 @@ export default function ArrowLinkHover({ label = "", additionalStyles = {} }) {
     >
       <a
         style={{
-          color: `${mouse ? "var(--logo-green)" : "black"}`,
+          color: `${mouse ? "var(--logo-green)" : color}`,
           transition,
         }}
       >
         {label}
       </a>
       <ArrowSvg
-        fill={mouse ? "var(--logo-green)" : "black"}
-        style={{ marginLeft: mouse ? "1.5rem" : ".5rem", transition }}
+        fill={mouse ? "var(--logo-green)" : color}
+        style={{
+          marginLeft: mouse ? "1.5rem" : ".5rem",
+          transition,
+        }}
       />
       <div
         style={{

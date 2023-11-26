@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import content from "../../assets/content";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const MenuItems = ({
   data = {
@@ -12,7 +12,7 @@ export const MenuItems = ({
 }) => {
   return (
     <div>
-      <Link href={"/home"} className="menu_list_items">
+      <Link to={data.link} className="menu_list_items">
         {data.label}
       </Link>
     </div>
@@ -56,9 +56,26 @@ export default function MenuToggle() {
   const onClick = () => {
     setOpen((e) => !e);
   };
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    setOpen(false);
+  }, [pathname]);
+
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("body-scroll-lock");
+    } else {
+      document.body.classList.remove("body-scroll-lock");
+    }
+  }, [open]);
   return (
     <>
-      <div className="menu_main_cont" onClick={onClick}>
+      <div
+        className="menu_main_cont"
+        // style={{ position: open ? "fixed" : "relative" }}
+        onClick={onClick}
+      >
         <div className={`menu_cover ${open ? "menu_cover-click " : ""}`} />
         <div className="menu_icon-cont">
           <span className={`menu_icon ${open ? "transformIcon" : ""}`} />
@@ -70,10 +87,14 @@ export default function MenuToggle() {
           />
         </div>
       </div>
+      <div
+        onClick={onClick}
+        className={`menubackDrop ${open ? "backDropVisible" : ""}`}
+      />
       <div className={`menu_details-cont ${open ? "openMenu" : ""}`}>
-        <h5>NAVIGATION</h5>
-        <hr />
         <div>
+          <h5>NAVIGATION</h5>
+          <hr />
           {content.menuItems.map((e) => (
             <MenuItems data={e} key={e.id} />
           ))}

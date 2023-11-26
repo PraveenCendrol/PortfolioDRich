@@ -1,9 +1,17 @@
 import baseLogo from "../assets/svgs/heroBaseLogo.svg";
 import herocoloredLogo from "../assets/svgs/heroColoredLogo.svg";
 import heroAvatar from "../assets/svgs/heroAvatar.svg";
+import instagramColor from "../assets/svgs/instagramColor.svg";
+import instagramStoke from "../assets/svgs/instagramStoke.svg";
+import linkedInColor from "../assets/svgs/linkedInColor.svg";
+import linkedInStoke from "../assets/svgs/linkedInStoke.svg";
+import figmaColor from "../assets/svgs/figmaColor.svg";
+import figmaStroke from "../assets/svgs/figmaStroke.svg";
 
 const content = {
   name: "Rich",
+  email: "denishrich07@gmail.com",
+  contact: "+91 790 4180 372",
   surname: "Dennis",
   jobDone: "Design by",
   ideas: [
@@ -18,7 +26,7 @@ const content = {
     {
       id: "09b87f1b-200a-4149-a122-dd20abbdb407",
       label: "Home",
-      link: "home",
+      link: "",
     },
     {
       id: "2f4fdab6-16e4-4851-bb48-800c81908630",
@@ -63,5 +71,36 @@ const content = {
   heroLogoBase: baseLogo,
   heroColoredLogo: herocoloredLogo,
   heroAvatar,
+  tailContent: {
+    head: "PIXEL PERFECT DESIGNS",
+    leftPara: {
+      line1: "To stand out in the digital era.",
+      line2: "Together we will set the new status quo.",
+      line3: "No nonsense, always on the cutting edge.",
+    },
+    rightPara:
+      "The combination of my passion for design & interaction positions me in a unique place in the web design world.",
+  },
+  footerLocation: "OOTY / TAMILNADU / INDIA",
+  footerLogos: [
+    {
+      stroke: instagramStoke,
+      color: instagramColor,
+      link: "",
+      id: "a59a67f0-5b9c-47bb-bca4-c14134d8f17b",
+    },
+    {
+      stroke: linkedInStoke,
+      color: linkedInColor,
+      link: "",
+      id: "e72bf45d-acab-4d3e-824e-3f858c8702c9",
+    },
+    {
+      stroke: figmaStroke,
+      color: figmaColor,
+      link: "",
+      id: "a78627b0-0208-4b67-8f36-f3d202414716",
+    },
+  ],
 };
 export default content;

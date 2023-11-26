@@ -1,3 +1,57 @@
+.loading_main-cont {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #000;
+  z-index: 10;
+  color: var(--menu-white);
+  transition: all 0.3s;
+  transform: translateY(100%);
+}
+.visible {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+}
+.loading_items {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  transition: all 0.5s ease;
+  opacity: 0;
+}
+
+@keyframes landIn {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+.opacityfull {
+  opacity: 1;
+}
+.loading_bullet {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--menu-white);
+  border-radius: 100%;
+}
+
 .nav-bar-main-cont {
   padding: 2.4rem 8rem;
   display: flex;
@@ -61,7 +115,7 @@
 }
 .scroll_i_main {
   position: relative;
-  width: 600px;
+  width: 60rem;
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
@@ -101,12 +155,14 @@
 .menu_main_cont {
   padding: 1.8rem 1.3rem;
   /* background-color: var(--menu-white); */
+  /* background-color: red; */
   position: relative;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 20;
+  /* right: 8rem; */
   /* overflow: hidden; */
 }
 .menu_icon-cont {
@@ -189,6 +245,9 @@
   padding: 10rem;
   color: var(--menu-white);
   z-index: 9;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .menu_details-cont h5,
@@ -209,9 +268,24 @@
   border-radius: 0%;
   top: 0;
 }
-
+.menubackDrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+  z-index: 5;
+  pointer-events: none;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.backDropVisible {
+  opacity: 0.8;
+  pointer-events: auto;
+}
 .menu_list_items {
-  font-size: 7rem;
+  font-size: 5rem;
   cursor: pointer;
   display: flex;
   color: var(--menu-white);
@@ -233,12 +307,13 @@
 }
 
 .menu_list_items:hover::before {
-  width: 2rem;
+  width: 1rem;
   margin-right: 3rem;
 }
 
 .menu_social_main {
   margin-top: 6rem;
+  justify-self: flex-end;
 }
 
 .menu_social_items_cont {
