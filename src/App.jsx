@@ -5,6 +5,7 @@ import Home from "./screens/Home/Home";
 import Footer from "./screens/Footer/Footer";
 import Loading from "./components/Generic/Loading";
 import { useEffect, useState } from "react";
+import About from "./screens/About/About";
 let loadingListOptions = {
   "/": ["Hello", "வணக்கம்", "Hola", "你好", "привет", "olá", "नमस्ते"],
   "/work": ["Work"],
@@ -48,9 +49,10 @@ function App() {
         loadingList={loadingListOptions[pathname]}
         isMounted={isMounted}
       />
-      <NavBar />
+      {pathname !== "/about" && <NavBar />}
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       <Footer />
     </div>

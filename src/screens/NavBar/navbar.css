@@ -5,7 +5,7 @@
   top: 0;
   left: 0;
   background-color: #000;
-  z-index: 10;
+  z-index: 1000;
   color: var(--menu-white);
   transition: all 0.3s;
   transform: translateY(100%);
@@ -119,6 +119,7 @@
   overflow: hidden;
   display: flex;
   justify-content: flex-end;
+  margin-right: 8rem;
 }
 .scroll_i_item {
   margin-right: 1rem;
@@ -154,14 +155,16 @@
 }
 .menu_main_cont {
   padding: 1.8rem 1.3rem;
-  /* background-color: var(--menu-white); */
+  background-color: var(--menu-white);
   /* background-color: red; */
-  position: relative;
+  position: fixed;
+  right: 8rem;
   aspect-ratio: 1;
   display: flex;
   justify-content: center;
   align-items: center;
   z-index: 20;
+  transition: all 0.5s;
   /* right: 8rem; */
   /* overflow: hidden; */
 }

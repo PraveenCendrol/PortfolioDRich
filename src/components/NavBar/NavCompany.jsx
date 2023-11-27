@@ -1,7 +1,7 @@
 import { useState } from "react";
 import content from "../../assets/content";
 
-export default function NavCompany() {
+export default function NavCompany({ companyTextColor = "" }) {
   const [entered, setEntered] = useState(false);
   const onMouseEnter = () => {
     setEntered(true);
@@ -10,7 +10,7 @@ export default function NavCompany() {
     setEntered(false);
   };
   return (
-    <div className="nav__main-cont">
+    <div className="nav__main-cont" style={{ color: companyTextColor }}>
       <div className="nav__brand-cont">
         <p className="nav__mainLogo">$</p>
         <div

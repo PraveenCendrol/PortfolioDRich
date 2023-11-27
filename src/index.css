@@ -24,11 +24,11 @@ body {
   font-size: 1.6rem;
 }
 /* Hide scroll bar without glitch */
-.body-scroll-lock {
+/* .body-scroll-lock {
   position: fixed;
   overflow-y: scroll;
   width: 100%;
-}
+} */
 
 /* Regular */
 @font-face {

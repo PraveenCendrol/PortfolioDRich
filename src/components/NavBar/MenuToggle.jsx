@@ -73,7 +73,7 @@ export default function MenuToggle() {
     <>
       <div
         className="menu_main_cont"
-        // style={{ position: open ? "fixed" : "relative" }}
+        style={{ background: open ? "transparent" : "" }}
         onClick={onClick}
       >
         <div className={`menu_cover ${open ? "menu_cover-click " : ""}`} />
