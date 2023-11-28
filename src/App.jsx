@@ -6,6 +6,7 @@ import Footer from "./screens/Footer/Footer";
 import Loading from "./components/Generic/Loading";
 import { useEffect, useState } from "react";
 import About from "./screens/About/About";
+import Contact from "./screens/Contact/Contact";
 let loadingListOptions = {
   "/": ["Hello", "வணக்கம்", "Hola", "你好", "привет", "olá", "नमस्ते"],
   "/work": ["Work"],
@@ -24,7 +25,6 @@ function App() {
         loadingListOptions[pathname].length > 5
           ? 3
           : loadingListOptions[pathname].length;
-      console.log(pathname, loadingListOptions[pathname].length);
       if (!isMounted) {
         setIsMounted(true);
         intervalID = setTimeout(() => {
@@ -53,6 +53,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>

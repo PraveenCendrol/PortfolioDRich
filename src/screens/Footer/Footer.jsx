@@ -57,7 +57,10 @@ export default function Footer() {
   };
 
   return (
-    <footer className="footer_main-cont">
+    <footer
+      className="footer_main-cont"
+      style={{ backgroundColor: pathname === "/contact" && "#202020" }}
+    >
       <div className="footer_top-cont">
         <div className="footer_top_text_cont">
           <p className="footer_head_text">YOUR CUP OF TEA?</p>
@@ -113,7 +116,9 @@ export default function Footer() {
         <div className="footer_socail-line" />
         <div
           className="footer_socail_cont"
-          style={{ backgroundColor: "black" }}
+          style={{
+            backgroundColor: pathname === "/contact" ? "#202020" : "black",
+          }}
         >
           {content.footerLogos.map((e) => (
             <SocialMedia data={e} />

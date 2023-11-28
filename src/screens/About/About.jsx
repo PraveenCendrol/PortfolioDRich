@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import content from "../../assets/content";
 import NavBar from "../NavBar/NavBar";
 import "./about.css";
@@ -23,6 +23,38 @@ const IcanDescCont = ({
       </h3>
       <p className="ican_main_desc">{data.desc}</p>
     </div>
+  );
+};
+
+const Loader = () => {
+  const [loadIndex, setLoadIndex] = useState(0);
+
+  useEffect(() => {
+    let timerId = setInterval(() => {
+      setLoadIndex((e) => {
+        if (e > 3) {
+          return 0;
+        } else {
+          return e + 1;
+        }
+      });
+    }, 1000);
+
+    return () => clearInterval(timerId);
+  }, []);
+
+  return (
+    <span className="loadingMain">
+      <span
+        className={`threedot-load ${loadIndex > 0 && "threedot-visible"}`}
+      />
+      <span
+        className={`threedot-load ${loadIndex > 1 && "threedot-visible"}`}
+      />
+      <span
+        className={`threedot-load ${loadIndex > 2 && "threedot-visible"}`}
+      />
+    </span>
   );
 };
 export default function About() {
@@ -70,7 +102,9 @@ export default function About() {
         <section id="about_ideologies" className="about_idea_main_cont">
           <div className="about_idea_top_head_cont">
             <p className="idea_head_text">{idealogyheading}</p>
-            <p className="idea_head_subtext">Ever-venturing</p>
+            <p className="idea_head_subtext">
+              Ever-venturing <Loader />
+            </p>
           </div>
           <div className="about_photo_cont">
             <p
@@ -83,7 +117,9 @@ export default function About() {
           </div>
         </section>
         <section id="icanhelpyou" className="icanhelp_main_cont">
-          <h1 className="idea_ican_text">I can help you with</h1>
+          <h1 className="idea_ican_text">
+            I can help you with <Loader />
+          </h1>
           <div className="ican_desc_main_cont">
             {icanHelpItems.map((e) => (
               <IcanDescCont key={e.id} data={e} />

@@ -108,3 +108,18 @@
   font-size: 2rem;
   line-height: 150%; /* 30px */
 }
+
+.loadingMain {
+}
+.threedot-load {
+  display: inline-block;
+  height: 0.6rem;
+  width: 0.6rem;
+  background-color: #7d7d7d;
+  margin: 0 0.3rem;
+  opacity: 0;
+  transition: all 1s ease;
+}
+.threedot-visible {
+  opacity: 1;
+}

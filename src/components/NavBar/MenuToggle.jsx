@@ -12,7 +12,11 @@ export const MenuItems = ({
 }) => {
   return (
     <div>
-      <Link to={data.link} className="menu_list_items">
+      <Link
+        onClick={() => window.scrollTo(0, 0)}
+        to={data.link}
+        className="menu_list_items"
+      >
         {data.label}
       </Link>
     </div>
@@ -34,7 +38,7 @@ export const SocialMediaItems = ({
   };
 
   return (
-    <div>
+    <div style={{ maxWidth: "max-content" }}>
       <a
         onMouseEnter={mouseChange}
         onMouseLeave={mouseChange}

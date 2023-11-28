@@ -1,16 +1,26 @@
 import { useState } from "react";
 import content from "../../assets/content";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 export default function NavCompany({ companyTextColor = "" }) {
   const [entered, setEntered] = useState(false);
+  const navigation = useNavigate();
+  const { pathname } = useLocation();
   const onMouseEnter = () => {
     setEntered(true);
   };
   const onMouseLeave = () => {
     setEntered(false);
   };
+  const changeRoute = () => {
+    navigation(pathname === "/" ? "" : "/");
+  };
   return (
-    <div className="nav__main-cont" style={{ color: companyTextColor }}>
+    <div
+      onClick={changeRoute}
+      className="nav__main-cont"
+      style={{ color: companyTextColor || "black" }}
+    >
       <div className="nav__brand-cont">
         <p className="nav__mainLogo">$</p>
         <div
