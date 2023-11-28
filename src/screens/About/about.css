@@ -1,8 +1,10 @@
 .about_main_cont {
+  min-height: 90vh;
 }
 .about_hero_cont {
   padding: 16rem 8rem;
   position: relative;
+  height: 70vh;
 }
 .about_hero_main_heading {
   font-size: 10rem;
@@ -15,7 +17,7 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   object-fit: cover;
   z-index: -2;
   transition: all 0.5s;

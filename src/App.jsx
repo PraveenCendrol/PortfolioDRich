@@ -7,6 +7,8 @@ import Loading from "./components/Generic/Loading";
 import { useEffect, useState } from "react";
 import About from "./screens/About/About";
 import Contact from "./screens/Contact/Contact";
+import Work from "./screens/Work/Work";
+import NotFound from "./screens/NotFound/NotFound";
 let loadingListOptions = {
   "/": ["Hello", "வணக்கம்", "Hola", "你好", "привет", "olá", "नमस्ते"],
   "/work": ["Work"],
@@ -17,23 +19,25 @@ let loadingListOptions = {
 function App() {
   const [isMounted, setIsMounted] = useState(false);
   const { pathname } = useLocation();
-
+  const isPathIncludes = Object.keys(loadingListOptions).includes(pathname);
   useEffect(
     (e) => {
       let intervalID;
-      const intervalDuration =
-        loadingListOptions[pathname].length > 5
-          ? 3
-          : loadingListOptions[pathname].length;
-      if (!isMounted) {
-        setIsMounted(true);
-        intervalID = setTimeout(() => {
-          setIsMounted(false);
-        }, intervalDuration * 1000);
-      } else {
-        intervalID = setTimeout(() => {
-          setIsMounted(false);
-        }, intervalDuration * 1000);
+      if (isPathIncludes) {
+        const intervalDuration =
+          loadingListOptions[pathname].length > 5
+            ? 3
+            : loadingListOptions[pathname].length;
+        if (!isMounted) {
+          setIsMounted(true);
+          intervalID = setTimeout(() => {
+            setIsMounted(false);
+          }, intervalDuration * 1000);
+        } else {
+          intervalID = setTimeout(() => {
+            setIsMounted(false);
+          }, intervalDuration * 1000);
+        }
       }
 
       return () => {
@@ -42,20 +46,24 @@ function App() {
     },
     [pathname]
   );
-
+  let skipPath = ["/about", "/work"];
   return (
     <div>
-      <Loading
-        loadingList={loadingListOptions[pathname]}
-        isMounted={isMounted}
-      />
-      {pathname !== "/about" && <NavBar />}
+      {isPathIncludes && (
+        <Loading
+          loadingList={loadingListOptions[pathname]}
+          isMounted={isMounted}
+        />
+      )}
+      {!skipPath.includes(pathname) && <NavBar />}
       <Routes>
+        <Route path="*" element={<NotFound />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/work" element={<Work />} />
       </Routes>
-      <Footer />
+      {isPathIncludes && <Footer />}
     </div>
   );
 }

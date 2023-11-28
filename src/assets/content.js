@@ -39,6 +39,7 @@ const content = {
         "Designing “Seal Deal” CRM for  Enhanced User Experience and Data Capture",
       use: "CRM for Data Capture.",
       img: crmsvg,
+      year: "2023",
     },
     {
       id: "b7391abc-7ba8-4360-a386-8cfc99927e84",
@@ -49,6 +50,7 @@ const content = {
         "Designed landing page for Interior Designers, Who Turns Dreams Into Reality",
       use: "Explore the Artistry of interior Design.",
       img: rahisvg,
+      year: "2023",
     },
     {
       id: "16dfab62-7189-4c9f-aecd-46728d715131",
@@ -59,6 +61,7 @@ const content = {
         "Designed landing page For Company Who Build Dreams. With Passion & Precision",
       use: "Turning Vision For Dream Home Into Reality.",
       img: buildhomesvg,
+      year: "2023",
     },
     {
       id: "46df577a-d68c-4608-948b-b6f9d8b23e64",
@@ -69,6 +72,7 @@ const content = {
         "APP FOR THE PARTNERS WHO COULD BRING CLIENTS TO THE COMPANY",
       use: "Unlocking Success Together.",
       img: partnersvg,
+      year: "2023",
     },
     {
       id: "e74ac6fa-uebvn-47e3-a036-137ab1d772a8",
@@ -79,6 +83,7 @@ const content = {
         "CULTIVATING INNOVATION, GATEWAY TO COLLABORATE WITH BRILLIANT MINDS",
       use: "Gateway To Meet Brilliant Minds.",
       img: itwebsvg,
+      year: "2023",
       extraBtn: "Coming Soon",
     },
     {
@@ -90,6 +95,7 @@ const content = {
         "DESIGN CREATES CULTURE. CULTURE SHAPES VALUES. VALUES DETERMINE THE FUTURE.",
       use: "To Find IDEAS, Find PROBLEMS.",
       img: rahisvg,
+      year: "2023",
     },
   ],
   menuItems: [

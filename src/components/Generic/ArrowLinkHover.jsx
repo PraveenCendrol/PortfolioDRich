@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 let transition = "all 1s cubic-bezier(0,1.02,0,1.12)";
-const ArrowSvg = ({ size = 24, fill = "#1C1B1F", ...props }) => {
+export const ArrowSvg = ({ size = 24, fill = "#1C1B1F", ...props }) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"

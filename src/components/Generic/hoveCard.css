@@ -16,6 +16,7 @@
   width: 30%;
   overflow: hidden;
   margin: 3rem 0;
+  cursor: pointer;
 }
 
 .hover_title_sub_text {
@@ -53,6 +54,7 @@
   font-size: 2.4rem;
   margin: 1.2rem 0;
   margin-bottom: 2rem;
+  text-transform: uppercase;
 }
 
 .hover_ani_para {

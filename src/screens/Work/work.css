@@ -1,0 +1,143 @@
+.work_main_cont {
+  padding: 0 8rem;
+}
+.work_header_video {
+  width: 100vw;
+  height: 68vh;
+  position: absolute;
+  object-fit: cover;
+  top: 0;
+  z-index: -5;
+}
+.work_title_container {
+  height: 55vh;
+  display: flex;
+  align-items: center;
+}
+.work_title_text {
+  color: #fff;
+  font-size: 10rem;
+}
+.work_all_project_section {
+  padding: 10rem 0;
+  /* background-color: red; */
+}
+.work_toggle_main_cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.work_all_project_text {
+  padding: 2rem 5rem;
+  border: 0.1px solid var(--mild-head-grey);
+}
+
+.work_toggler_main {
+  width: 8rem;
+  height: 8rem;
+  border: 0.1rem solid #9a9a9a;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+.work_toggler_border_color {
+  border-color: black;
+}
+.toggler_bg_block {
+  width: 2rem;
+  height: 8rem;
+  background-color: black;
+  position: absolute;
+  transition: all 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.toggler1none {
+  left: 0;
+  top: 130%;
+}
+.toggler2none {
+  left: 2rem;
+  top: -130%;
+}
+.toggler3none {
+  left: 4rem;
+  top: 130%;
+}
+.toggler4none {
+  left: 6rem;
+  top: -130%;
+}
+
+.toggler1visible {
+  left: 0;
+  top: 0;
+}
+.toggler2visible {
+  left: 2rem;
+  top: 0;
+}
+.toggler3visible {
+  left: 4rem;
+  top: 0;
+}
+.toggler4visible {
+  left: 6rem;
+  top: 0;
+}
+
+.work_toggleoption_cont {
+  display: flex;
+  width: 20rem;
+  justify-content: space-between;
+}
+.work_list_main_cont {
+  margin-top: 8rem;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  overflow: hidden;
+}
+
+.work_list_title_cont {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5rem;
+  border-bottom: 0.1rem solid #bdbdbd;
+  transition: all 0.5s ease-in-out;
+}
+.work_list_title_name {
+  width: 50rem;
+  min-width: 50rem;
+}
+.work_list_title_service {
+  width: 11rem;
+  min-width: 11rem;
+}
+.work_list_title_year {
+  width: 11rem;
+  min-width: 11rem;
+}
+.list_item_head {
+  color: #000;
+  font-size: 4rem;
+  font-style: italic;
+  font-family: EuclidFlexLight;
+}
+.list_item_tail {
+  font-size: 2.6rem;
+  font-family: EuclidFlexLight;
+}
+.worklist_hover {
+  cursor: pointer;
+}
+.worklist_hover:hover {
+  margin-left: 5rem;
+  margin-right: -5rem;
+}
+.worklist_color {
+  transition: all 0.5s ease-in-out;
+}
+.worklist_hover:hover .worklist_color {
+  color: #878787;
+}
