@@ -9,6 +9,12 @@ import figmaColor from "../assets/svgs/figmaColor.svg";
 import figmaStroke from "../assets/svgs/figmaStroke.svg";
 import aboutHeroVideo from "../assets/videos/aboutVideo.mp4";
 import aboutPhoto from "../assets/svgs/aboutPhoto.svg";
+import rahisvg from "./svgs/rahi.svg";
+import crmsvg from "./svgs/crmsvg.svg";
+import buildhomesvg from "./svgs/buildhome.svg";
+import partnersvg from "./svgs/partner.svg";
+import itwebsvg from "./svgs/itweb.svg";
+
 const content = {
   name: "Rich",
   email: "denishrich07@gmail.com",
@@ -22,6 +28,69 @@ const content = {
     "I CREATE.",
     "I SOLVE PROBLEM.",
     "I PHOTOGRAPH.",
+  ],
+  projects: [
+    {
+      id: "e74ac6fa-57ae-47e3-a036-137ab1d772a8",
+      link: "",
+      category: "UX & UI",
+      projectHead: "SEAL DEAL",
+      projectbrief:
+        "Designing “Seal Deal” CRM for  Enhanced User Experience and Data Capture",
+      use: "CRM for Data Capture.",
+      img: crmsvg,
+    },
+    {
+      id: "b7391abc-7ba8-4360-a386-8cfc99927e84",
+      link: "",
+      category: "UX & UI",
+      projectHead: "RAHI",
+      projectbrief:
+        "Designed landing page for Interior Designers, Who Turns Dreams Into Reality",
+      use: "Explore the Artistry of interior Design.",
+      img: rahisvg,
+    },
+    {
+      id: "16dfab62-7189-4c9f-aecd-46728d715131",
+      link: "",
+      category: "UX & UI",
+      projectHead: "BUILDHOME.CENDROL",
+      projectbrief:
+        "Designed landing page For Company Who Build Dreams. With Passion & Precision",
+      use: "Turning Vision For Dream Home Into Reality.",
+      img: buildhomesvg,
+    },
+    {
+      id: "46df577a-d68c-4608-948b-b6f9d8b23e64",
+      link: "",
+      category: "UX & UI",
+      projectHead: "PARTNER APPLICATION",
+      projectbrief:
+        "APP FOR THE PARTNERS WHO COULD BRING CLIENTS TO THE COMPANY",
+      use: "Unlocking Success Together.",
+      img: partnersvg,
+    },
+    {
+      id: "e74ac6fa-uebvn-47e3-a036-137ab1d772a8",
+      link: "",
+      category: "UX & UI",
+      projectHead: "IT WEBSITE",
+      projectbrief:
+        "CULTIVATING INNOVATION, GATEWAY TO COLLABORATE WITH BRILLIANT MINDS",
+      use: "Gateway To Meet Brilliant Minds.",
+      img: itwebsvg,
+      extraBtn: "Coming Soon",
+    },
+    {
+      id: "e74ac6fa-57ae-wepo-a036-137ab1d772a8",
+      link: "/about",
+      category: "RICH",
+      projectHead: "UX UI DESIGNER",
+      projectbrief:
+        "DESIGN CREATES CULTURE. CULTURE SHAPES VALUES. VALUES DETERMINE THE FUTURE.",
+      use: "To Find IDEAS, Find PROBLEMS.",
+      img: rahisvg,
+    },
   ],
   menuItems: [
     {
