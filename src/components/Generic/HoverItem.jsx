@@ -17,7 +17,7 @@ export default function HoverItem({ data }) {
       className="hover_items_main_cont"
       onClick={() => {
         window.scrollTo(0, 0);
-        navigate(link);
+        navigate(link || `/work/${id}`);
       }}
     >
       <div className="hover_item_cont">

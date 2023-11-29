@@ -9,6 +9,7 @@ import About from "./screens/About/About";
 import Contact from "./screens/Contact/Contact";
 import Work from "./screens/Work/Work";
 import NotFound from "./screens/NotFound/NotFound";
+import ProjectDetails from "./screens/ProjectDetails/ProjectDetails";
 let loadingListOptions = {
   "/": ["Hello", "வணக்கம்", "Hola", "你好", "привет", "olá", "नमस्ते"],
   "/work": ["Work"],
@@ -62,8 +63,9 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/work/:id" element={<ProjectDetails />} />
       </Routes>
-      {isPathIncludes && <Footer />}
+      {isPathIncludes || (/\/work\//.test(pathname) && <Footer />)}
     </div>
   );
 }
