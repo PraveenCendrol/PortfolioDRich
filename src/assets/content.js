@@ -63,10 +63,11 @@ const content = {
           title: "UNDERSTANDING THE CHALLENGES",
           special: true,
           align: "right",
-          content: [
+          specialContent: [
             {
               id: "8e662eef-dee9-4a06-bb9e-2d9a3e1381a6",
               heading: "CHALLENGES",
+              position: "topLeft",
               subHead: "UNDERSTANDING THE CHALLENGES",
               desc: `SealTech Solutions had a powerful CRM application, but they recognized the need for a comprehensive redesign to keep up with evolving market demands. Our team was tasked with reimagining the user interface, optimizing workflows, ensuring a seamless user experience, and enhancing data capture capabilities through the addition of an activity section. The client also wanted to integrate new technologies and features into the existing system.`,
               bgColor: "linear-gradient(90deg, #EC008C 0%, #FC6767 100%)",
@@ -74,6 +75,7 @@ const content = {
             {
               id: "92572259-23a9-471f-8943-36e91be4cb62",
               heading: "PROCESS",
+              position: "topRight",
               subHead: "THE DESIGN PROCESS",
               desc: `Our journey began with in-depth research and analysis of the current CRM system. We conducted user interviews, gathered feedback from internal stakeholders, and analyzed user data. Key pain points included lengthy quote generation processes, complex lead management, the need for more actionable insights, and the necessity of proper data capture.`,
               bgColor: "linear-gradient(90deg, #5235D3 0%, #004E92 100%)",
@@ -81,6 +83,7 @@ const content = {
             {
               id: "951958bf-6ed1-4624-a571-40cee01499d2",
               heading: "GOALS",
+              position: "bottomLeft",
               subHead: "DESIGN GOALS",
               isDifferent: true,
               contentList: [
@@ -115,12 +118,14 @@ const content = {
             },
             {
               id: "0803291c-07db-4271-a24b-d7914d4a501b",
+              position: "bottomRight",
               heading: "PROTOTYPING",
               subHead: "WIREFRAMING AND PROTOTYPING",
               desc: `We created wireframes and prototypes to visualize the proposed changes. This allowed us to experiment with various layouts and user flows, optimizing the CRM's functionality, and introducing the activity section. Feedback from user testing sessions was invaluable in refining the design.`,
               bgColor: "linear-gradient(90deg, #FFB347 0%, #FC3 100%)",
             },
           ],
+          content: "",
         },
         {
           title: "DESIGN PROCESS",
@@ -484,6 +489,7 @@ const content = {
     {
       id: "e74ac6fa-uebvn-47e3-a036-137ab1d772a8",
       link: "",
+
       category: "UX & UI",
       projectHead: "IT WEBSITE",
       projectbrief:
