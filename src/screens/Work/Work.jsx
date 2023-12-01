@@ -2,7 +2,7 @@ import content from "../../assets/content";
 import NavBar from "../NavBar/NavBar";
 import "./work.css";
 import workVideo from "../../assets/videos/workVide0.mp4";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import HoverItem from "../../components/Generic/HoverItem";
 const transition = "all .5s ease-in-out";
@@ -155,6 +155,21 @@ export const ListItemForWork = () => {
 
 export default function Work() {
   const [activeToggle, setActiveToggle] = useState("list");
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // console.log(">>>>>", windowWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
   const navigate = useNavigate();
   return (
     <>
@@ -234,7 +249,7 @@ export default function Work() {
               }}
             >
               {content.projects.map((e) => (
-                <HoverItem data={e} key={e.id} />
+                <HoverItem data={e} windowWidth={windowWidth} key={e.id} />
               ))}
             </div>
           </div>

@@ -109,7 +109,7 @@
 
 @media screen and (max-width: 600px) {
   .hover_card_main {
-    padding: 2rem;
+    padding: 0 2rem;
     position: relative;
   }
   .hover_title_text {
@@ -130,5 +130,17 @@
   }
   .hover-top {
     left: 70%;
+  }
+  .hover_item_cont {
+    height: 31rem;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    min-width: 60rem;
+    flex-direction: column;
+    color: var(--menu-white);
+    padding: 2rem;
+    justify-content: space-between;
+    /* background-color: red; */
   }
 }

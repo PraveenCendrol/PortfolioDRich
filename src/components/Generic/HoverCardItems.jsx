@@ -6,15 +6,19 @@ export default function HoverCardItems({ windowWidth }) {
   return (
     <section className="hover_card_main">
       <div
-        style={{
-          position: "sticky",
-          paddingTop: "1rem",
-          top: "0",
-          left: "2rem",
-          backgroundColor: "white",
-          zIndex: 3,
-          width: "100%",
-        }}
+        style={
+          windowWidth < 600
+            ? {
+                position: "sticky",
+                padding: "5rem 0",
+                top: "0",
+                left: "2rem",
+                backgroundColor: "white",
+                zIndex: 3,
+                width: "100%",
+              }
+            : {}
+        }
       >
         <h3 className="hover_title_text">SELECTED PROJECTS</h3>
         <h1 className="hover_title_sub_text">Things I like to show others</h1>

@@ -9,7 +9,7 @@
 
 @media screen and (max-width: 1100px) {
   .not_found_main_cont {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 .not_found_head {
@@ -49,5 +49,10 @@
 @media screen and (max-height: 1400px) {
   .not_found_image {
     height: 80%;
+  }
+}
+@media screen and (max-height: 1200px) {
+  .not_found_image {
+    height: 60%;
   }
 }

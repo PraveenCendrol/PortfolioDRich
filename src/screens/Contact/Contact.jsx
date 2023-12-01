@@ -12,6 +12,7 @@ export const FormRow = ({
   placeholder = "",
   onTextChange = () => {},
   value = "",
+  minlength = "8",
 }) => {
   const onChange = (e) => {
     onTextChange(e.target.value);
@@ -29,6 +30,7 @@ export const FormRow = ({
           onChange={onChange}
           value={value}
           className="form_row_ans"
+          minlength={minlength}
         />
       </div>
     </div>
@@ -173,16 +175,20 @@ export default function Contact() {
           </div>
         </form>
         <div className=" contact_details_container">
-          <h6 className="contact_detail_head">CONTACT DETAILS</h6>
-          <p className="contact_details">{content.email}</p>
-          <p className="contact_details">{content.contact}</p>
-          <h6 className="contact_detail_head" style={{ marginTop: "4rem" }}>
-            SOCIAL
-          </h6>
-          <div style={{ alignSelf: "flex-start" }}>
-            {content.socialMedia.map((e) => (
-              <SocialMediaItems data={e} key={e.id} />
-            ))}
+          <div>
+            <h6 className="contact_detail_head">CONTACT DETAILS</h6>
+            <p className="contact_details">{content.email}</p>
+            <p className="contact_details">{content.contact}</p>
+          </div>
+          <div>
+            <h6 className="contact_detail_head" style={{ marginTop: "4rem" }}>
+              SOCIAL
+            </h6>
+            <div style={{ alignSelf: "flex-start" }}>
+              {content.socialMedia.map((e) => (
+                <SocialMediaItems data={e} key={e.id} />
+              ))}
+            </div>
           </div>
         </div>
       </section>

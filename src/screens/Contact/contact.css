@@ -227,3 +227,41 @@
     transform: rotate(-360deg);
   }
 }
+
+@media screen and (max-width: 600px) {
+  .contact_main_cont {
+    padding: 0 2rem;
+  }
+  .contact_form_main {
+    padding: 2rem 0;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 0;
+  }
+  .contact_form_container {
+    width: 100%;
+  }
+  .contact_details_container {
+    margin-top: 3rem;
+    flex-grow: 1;
+    margin-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact_detail_head {
+    margin-top: 0 !important;
+  }
+  .contact_hero_head {
+    font-size: 6rem;
+    max-width: 60vw;
+  }
+  .contact_hero_video {
+    width: 20rem;
+    height: 25rem;
+    /* background-color: aqua; */
+    margin-right: 3rem;
+    object-fit: cover;
+  }
+}
