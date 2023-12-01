@@ -14,11 +14,16 @@ export const SocialMedia = ({ data = {} }) => {
   );
 };
 
-export const TopArrow = ({ fill = "white", style = "", ...props }) => (
+export const TopArrow = ({
+  size = "4rem",
+  fill = "white",
+  style = "",
+  ...props
+}) => (
   <svg
     className={style}
-    width={40}
-    height={40}
+    width={size}
+    height={size}
     viewBox="0 0 50 50"
     fill="none"
     {...props}
@@ -55,6 +60,20 @@ export default function Footer() {
   const onMouseEvent = () => {
     setMouse((e) => !e);
   };
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // console.log(">>>>>", windowWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <footer
@@ -85,7 +104,9 @@ export default function Footer() {
               </a>
             </div>
           </div>
-          <ArrowLinkHover color="white" label="LET’S WORK TOGETHER" />
+          {!(windowWidth < 600) && (
+            <ArrowLinkHover color="white" label="LET’S WORK TOGETHER" />
+          )}
           <div
             onMouseEnter={onMouseEvent}
             onMouseLeave={onMouseEvent}

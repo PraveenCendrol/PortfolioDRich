@@ -9,6 +9,12 @@
   top: 0;
   z-index: -5;
 }
+
+@media screen and (min-height: 600px) {
+  .work_header_video {
+    height: 60vh;
+  }
+}
 .work_title_container {
   height: 55vh;
   display: flex;

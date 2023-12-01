@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import crmsvg from "../../assets/svgs/crmsvg.svg";
 import { useNavigate } from "react-router-dom";
 
-export default function HoverItem({ data }) {
+export default function HoverItem({ data, windowWidth }) {
   const [hover, setHover] = useState(false);
   const { id, category, projectHead, projectbrief, use, img, extraBtn, link } =
     data;
@@ -24,7 +24,7 @@ export default function HoverItem({ data }) {
         <img
           src={img}
           className={`hover_bg_video ${
-            !hover ? "hover-opacity" : " hover-top"
+            windowWidth < 600 || hover ? " hover-top" : "hover-opacity"
           }`}
         />
 
@@ -32,23 +32,31 @@ export default function HoverItem({ data }) {
         <div>
           <div className="hover_item_ani_cont">
             <h3 className="hover_item_main_head">{projectHead}</h3>
-            <div className={`hover_ani_para ${hover && "hover-width"}`}>
+            <div
+              className={`hover_ani_para ${
+                (windowWidth < 600 || hover) && "hover-width"
+              }`}
+            >
               <p className="hover_item_main_para ">{projectbrief}</p>
             </div>
           </div>
           <div className="hover_custom_details_cont">
             <div
               className="hover_cont_line"
-              style={{ width: hover ? "100%" : "10%" }}
+              style={{ width: windowWidth < 600 || hover ? "100%" : "10%" }}
             />
             <p
               className={`hover_custom_detail hov_another_detail ${
-                hover && "hover-opacity"
+                (windowWidth < 600 || hover) && "hover-opacity"
               }`}
             >
               {use}
             </p>
-            <p className={`hover_custom_detail ${!hover && "hover-opacity"}`}>
+            <p
+              className={`hover_custom_detail ${
+                !(windowWidth < 600 || hover) ? "hover-opacity" : ""
+              }`}
+            >
               {extraBtn || "View"}
             </p>
           </div>

@@ -19,6 +19,7 @@ export const ArrowSvg = ({ size = 24, fill = "#1C1B1F", ...props }) => {
   );
 };
 export default function ArrowLinkHover({
+  windowWidth,
   label = "",
   additionalStyles = {},
   color = "black",
@@ -57,6 +58,7 @@ export default function ArrowLinkHover({
           marginLeft: mouse ? "1.5rem" : ".5rem",
           transition,
         }}
+        size={"3rem"}
       />
       <div
         style={{

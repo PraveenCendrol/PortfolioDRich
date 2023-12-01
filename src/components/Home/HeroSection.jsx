@@ -1,10 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import content from "../../assets/content";
 import ArrowLinkHover from "../Generic/ArrowLinkHover";
 import clickHere from "../../assets/svgs/clickHere.svg";
 import hoverHere from "../../assets/svgs/hoverHere.svg";
 import tracer from "../../assets/svgs/tracer.svg";
-export default function HeroSection() {
+export default function HeroSection({ windowWidth }) {
   const [imageVisible, setImageVisible] = useState(false);
   const [hover, setHover] = useState(false);
   const clickHereRef = useRef(false);
@@ -24,11 +24,13 @@ export default function HeroSection() {
         <p className="hero_intro_text">
           {content.heroSubHeadGreetings}{" "}
           <span onClick={onClickName}>
-            {!clickHereRef.current && <img src={clickHere} />}
+            {!clickHereRef.current && (
+              <img src={clickHere} className="clickHere" />
+            )}
             <img
               src={content.heroAvatar}
               className="hero_avatar"
-              style={{ top: imageVisible ? "-12rem" : "1.5rem", left: "-3rem" }}
+              style={{ top: imageVisible ? "-400%" : "1.5rem", left: "-70%" }}
             />
             <span
               style={{
@@ -47,20 +49,23 @@ export default function HeroSection() {
         </p>
         <h1>{content.heroContent}</h1>
         <ArrowLinkHover
+          windowWidth={windowWidth}
           additionalStyles={{ marginTop: "4.6rem" }}
           label="LET’S WORK TOGETHER"
         />
       </div>
-      <div className="hero_logo_main-cont">
-        {!hover && <img src={hoverHere} className="hero-hover-here" />}
-        <img
-          onMouseEnter={onHoverChange}
-          src={content.heroLogoBase}
-          className="hero-base-logo"
-        />
-        <img src={content.heroColoredLogo} className="hero-colored-logo" />
-        <img src={tracer} className="customelement" />
-      </div>
+      {windowWidth > 600 && (
+        <div className="hero_logo_main-cont">
+          {!hover && <img src={hoverHere} className="hero-hover-here" />}
+          <img
+            onMouseEnter={onHoverChange}
+            src={content.heroLogoBase}
+            className="hero-base-logo"
+          />
+          <img src={content.heroColoredLogo} className="hero-colored-logo" />
+          <img src={tracer} className="customelement" />
+        </div>
+      )}
     </div>
   );
 }

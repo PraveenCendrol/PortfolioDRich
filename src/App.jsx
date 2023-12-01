@@ -15,12 +15,14 @@ let loadingListOptions = {
   "/work": ["Work"],
   "/about": ["About"],
   "/contact": ["Contact"],
-  "/resume": ["Resume"],
+  // "/resume": ["Resume"],
 };
 function App() {
   const [isMounted, setIsMounted] = useState(false);
   const { pathname } = useLocation();
+
   const isPathIncludes = Object.keys(loadingListOptions).includes(pathname);
+
   useEffect(
     (e) => {
       let intervalID;
@@ -65,7 +67,7 @@ function App() {
         <Route path="/work" element={<Work />} />
         <Route path="/work/:id" element={<ProjectDetails />} />
       </Routes>
-      {isPathIncludes || (/\/work\//.test(pathname) && <Footer />)}
+      {/\/work\//.test(pathname) || isPathIncludes ? <Footer /> : null}
     </div>
   );
 }

@@ -6,6 +6,7 @@
   justify-content: space-between;
   padding-right: 13.6rem;
 }
+
 .hero_intro_text-cont {
   width: 76rem;
 }
@@ -28,6 +29,24 @@
   z-index: -2;
   transition: all 0.5s cubic-bezier(1, 1.2, 0.74, 1.32);
 }
+
+@media screen and (max-width: 1000px) {
+  .hero_avatar {
+    display: none;
+  }
+}
+@media screen and (max-width: 600px) {
+  .home_hero_main_cont {
+    padding: 8rem 2rem;
+  }
+  .hero_intro_text {
+    width: 30rem;
+  }
+  .hero_intro_text-cont h1 {
+    font-size: 4rem;
+    margin-top: 3rem;
+  }
+}
 .hero_intro_text span img {
   position: absolute;
   top: -265%;
@@ -45,10 +64,14 @@
   top: 25%;
   opacity: 0;
   pointer-events: none;
+  height: 26rem;
+  width: 34rem;
   /* transition: all 1s cubic-bezier(0.18, 0.35, 0, 1.29); */
   transition: all 0.5s ease;
 }
 .hero-base-logo {
+  height: 26rem;
+  width: 34rem;
 }
 .hero-hover-here {
   position: absolute;
@@ -61,13 +84,17 @@
 }
 
 .customelement {
+  height: 46rem;
+  width: 35rem;
   /* background-color: red; */
   position: absolute;
-  top: 12px;
-  left: -22px;
+  top: 8px;
+  left: -14px;
   pointer-events: none;
   z-index: 2;
   opacity: 1;
+  -webkit-clip-path: polygon(0 0, 100% 0, 99% 75%, 0 77%);
+  clip-path: polygon(0 0, 100% 0, 99% 75%, 0 77%);
 }
 .hero-base-logo:hover + .customelement {
   opacity: 0;
@@ -80,6 +107,18 @@
   background-color: white;
   position: absolute;
   top: 66%;
+}
+
+@media screen and (max-width: 800px) {
+  .customelement {
+    display: none;
+  }
+  .clickHere {
+    display: none;
+  }
+  .hero-hover-here {
+    display: none;
+  }
 }
 
 /* tail cont */
@@ -141,7 +180,7 @@
 .tail_content_left h1 {
   font-family: EuclidFlexRegular;
   font-size: 3.8rem;
-  margin-bottom: 2.6rem;
+  margin-bottom: 1.5rem;
 }
 .tail_content_left div {
   width: 60%;
@@ -174,4 +213,69 @@
   position: absolute;
   bottom: -3rem;
   right: 0;
+}
+.scroll_ideas_tail {
+  background-color: white !important;
+  position: absolute;
+  top: 35%; /* Position it vertically in the middle */
+  left: 98%; /* Initial left position */
+  /* transform-origin: top left; Set the transform origin */
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+@media screen and (max-width: 600px) {
+  .tail_main-cont {
+    padding: 0 0;
+    width: 100vw;
+    height: auto;
+    margin-bottom: 6rem;
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+  .tail_content_div {
+    position: relative;
+    display: block;
+    padding: 4rem 2rem;
+  }
+  .tail_black-cont {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+  }
+  .tail_content_left {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+  }
+  .tail_content_left p {
+    font-family: EuclidFlexLight;
+    font-size: 3rem;
+    margin-bottom: 2.6rem;
+  }
+  .tail_content_left h1 {
+    font-family: EuclidFlexRegular;
+    font-size: 16px;
+    margin-bottom: 1rem;
+  }
+  .tail_content_right {
+    width: 70%;
+    margin-top: 3rem;
+  }
+  .tail_content_right h3 {
+    font-family: EuclidFlexLight;
+    font-size: 16px;
+    margin-bottom: 2.6rem;
+    font-weight: 100;
+  }
 }

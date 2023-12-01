@@ -106,3 +106,29 @@
 }
 .hover_item_ani_cont:hover {
 }
+
+@media screen and (max-width: 600px) {
+  .hover_card_main {
+    padding: 2rem;
+    position: relative;
+  }
+  .hover_title_text {
+    font-size: 2rem;
+  }
+  .hover_title_sub_text {
+    margin-top: 2rem;
+    font-size: 4rem;
+  }
+  .hover_section_list_cont {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between;
+  align-items: center; */
+  }
+  .hover_items_main_cont {
+    width: 100%;
+  }
+  .hover-top {
+    left: 70%;
+  }
+}

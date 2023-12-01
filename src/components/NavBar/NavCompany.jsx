@@ -2,7 +2,7 @@ import { useState } from "react";
 import content from "../../assets/content";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
-export default function NavCompany({ companyTextColor = "" }) {
+export default function NavCompany({ companyTextColor = "", windowWidth = 0 }) {
   const [entered, setEntered] = useState(false);
   const navigation = useNavigate();
   const { pathname } = useLocation();
@@ -28,15 +28,23 @@ export default function NavCompany({ companyTextColor = "" }) {
           onMouseLeave={onMouseLeave}
           className="nav_logo-ani-cont"
         >
-          <p className={`${entered ? "lefttoright" : "righttoleft"}`}>
-            {content.surname}
-          </p>
-          <p className={`${entered ? "bottomtotop" : "toptobottom"}`}>
-            {content.jobDone}
-          </p>
-          <p className={`${entered ? "lightLeft" : "lightRight"}`}>
-            {content.name}
-          </p>
+          {windowWidth > 500 ? (
+            <>
+              <p className={`${entered ? "lefttoright" : "righttoleft"}`}>
+                {content.surname}
+              </p>
+
+              <p className={`${entered ? "bottomtotop" : "toptobottom"}`}>
+                {content.jobDone}
+              </p>
+
+              <p className={`${entered ? "lightLeft" : "lightRight"}`}>
+                {content.name}
+              </p>
+            </>
+          ) : (
+            `${" "}${content.jobDone} ${content.name}`
+          )}
         </div>
       </div>
     </div>
