@@ -161,6 +161,7 @@
   color: var(--menu-white);
   background-image: url(../../assets/svgs/teamBg.png);
   padding: 3.6rem;
+  position: relative;
 }
 .project_details_team h2 {
   font-size: 4rem;
@@ -363,4 +364,103 @@
 .special_inner_height {
   min-height: 10rem;
   opacity: 1;
+}
+.projectDetails_team_list_mobile_main {
+  display: flex;
+  overflow: visible;
+  width: 100%;
+  max-width: 100%;
+  /* transform: translateX(-30%); */
+  transition: all 0.5s ease-in-out;
+}
+
+.project_details_team_mobile_cont {
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  padding: 0 2rem;
+  display: flex;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+}
+
+.team_mob_slogan {
+  color: #fff;
+  font-size: 2rem;
+  font-style: italic;
+  font-weight: 275;
+}
+
+.project_team_mobile_img {
+  width: 40%;
+  aspect-ratio: 1/1.1;
+}
+
+.team_mobile_btn_cont {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+}
+
+.right_arrow {
+  background-color: #fff;
+  /* padding: 2rem; */
+  height: 4rem;
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center;
+  margin-right: 3rem;
+}
+.left_arrow {
+  background-color: #fff;
+  transform: rotateZ(180deg);
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  aspect-ratio: 1;
+}
+@media screen and (max-width: 600px) {
+  .project_details_hero_section {
+    padding: 6rem 2rem;
+  }
+  .project_detials_main_head {
+    font-size: 4rem;
+    font-family: EuclidFlexLight;
+    margin-top: 4rem;
+  }
+  .project_overview_main_cont {
+    flex-wrap: wrap;
+    margin-top: 4rem;
+    width: 90vw;
+  }
+  .project_overview_items {
+    width: 45vw;
+    min-width: 35vw;
+    flex: 0;
+    margin: 3rem 0 0 3rem;
+  }
+  .project_details_pro_expl_cont {
+    padding: 02rem;
+  }
+  .project_details_pro_item {
+    width: 90%;
+    max-width: 90%;
+    padding: 5rem 0;
+    padding-right: 2rem;
+    position: relative;
+  }
+  .project_details_team_list_cont {
+    margin: 0 -3.6rem;
+    overflow: hidden;
+  }
+  .rightBorder {
+    background-image: linear-gradient(
+      -105%,
+      #ff0000 30.729200000000002%,
+      #faff00 65.625%,
+      #719cf0 100%
+    );
+  }
 }

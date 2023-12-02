@@ -199,4 +199,16 @@
     min-width: 20%;
     text-align: center;
   }
+  .work_list_title_cont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 0.1rem solid #bdbdbd;
+    transition: all 0.5s ease-in-out;
+  }
+  .worklist_hover:hover {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }

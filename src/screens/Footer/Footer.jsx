@@ -86,7 +86,12 @@ export default function Footer() {
           <h1 className="footer_start_text">Let’s start</h1>
         </div>
         <div className="footer_time_loc_cont">
-          <h1 className="footer_start_text ">{formattedTime}</h1>
+          <h1
+            className="footer_start_text "
+            style={windowWidth < 600 ? { fontSize: "3rem" } : {}}
+          >
+            {formattedTime}
+          </h1>
           <p className="footer_head_text">{content.footerLocation}</p>
         </div>
       </div>

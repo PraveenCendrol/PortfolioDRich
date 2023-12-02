@@ -8,7 +8,7 @@ import linkedInStoke from "../assets/svgs/linkedInStoke.svg";
 import figmaColor from "../assets/svgs/figmaColor.svg";
 import figmaStroke from "../assets/svgs/figmaStroke.svg";
 import aboutHeroVideo from "../assets/videos/aboutVideo.mp4";
-import aboutPhoto from "../assets/svgs/aboutPhoto.svg";
+import aboutPhoto from "../assets/svgs/aboutPhoto.png";
 import rahisvg from "./svgs/rahi.svg";
 import crmsvg from "./svgs/crmsvg.svg";
 import buildhomesvg from "./svgs/buildhome.svg";
@@ -169,6 +169,7 @@ const content = {
       ],
       teamMembers: [
         {
+          slogan: `“Go with the flow”`,
           name: "YASH RAJ PACHORI",
           bgColor: "rgba(101, 1, 100, 0.50)",
           designation: "UX UI DESIGNER",
@@ -176,6 +177,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“The next big thing is the one that makes the last big thing usable.”`,
           name: "SHUBHAM PANDEY",
           bgColor: "rgba(152, 0, 101, 0.50)",
           designation: "UX UI DESIGNER",
@@ -183,6 +185,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Your old site is the best prototype of your new site”`,
           name: "DENISH RICH",
           bgColor: "rgba(254, 25, 56, 0.50)",
           designation: "UX UI DESIGNER",
@@ -190,6 +193,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Accessible design is good design.”`,
           name: "OVIYA",
           bgColor: "rgba(255, 72, 66, 0.50)",
           designation: "UX UI INTERN",
@@ -265,6 +269,7 @@ const content = {
       ],
       teamMembers: [
         {
+          slogan: `“Go with the flow”`,
           name: "YASH RAJ PACHORI",
           bgColor: "rgba(101, 1, 100, 0.50)",
           designation: "UX UI DESIGNER",
@@ -272,6 +277,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“The next big thing is the one that makes the last big thing usable.”`,
           name: "SHUBHAM PANDEY",
           bgColor: "rgba(152, 0, 101, 0.50)",
           designation: "UX UI DESIGNER",
@@ -279,6 +285,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Your old site is the best prototype of your new site”`,
           name: "DENISH RICH",
           bgColor: "rgba(254, 25, 56, 0.50)",
           designation: "UX UI DESIGNER",
@@ -286,6 +293,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Accessible design is good design.”`,
           name: "OVIYA",
           bgColor: "rgba(255, 72, 66, 0.50)",
           designation: "UX UI INTERN",
@@ -361,6 +369,7 @@ const content = {
       ],
       teamMembers: [
         {
+          slogan: `“Go with the flow”`,
           name: "YASH RAJ PACHORI",
           bgColor: "rgba(101, 1, 100, 0.50)",
           designation: "UX UI DESIGNER",
@@ -368,6 +377,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“The next big thing is the one that makes the last big thing usable.”`,
           name: "SHUBHAM PANDEY",
           bgColor: "rgba(152, 0, 101, 0.50)",
           designation: "UX UI DESIGNER",
@@ -375,6 +385,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Your old site is the best prototype of your new site”`,
           name: "DENISH RICH",
           bgColor: "rgba(254, 25, 56, 0.50)",
           designation: "UX UI DESIGNER",
@@ -382,6 +393,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Accessible design is good design.”`,
           name: "OVIYA",
           bgColor: "rgba(255, 72, 66, 0.50)",
           designation: "UX UI INTERN",
@@ -457,6 +469,7 @@ const content = {
       ],
       teamMembers: [
         {
+          slogan: `“Go with the flow”`,
           name: "YASH RAJ PACHORI",
           bgColor: "rgba(101, 1, 100, 0.50)",
           designation: "UX UI DESIGNER",
@@ -464,6 +477,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“The next big thing is the one that makes the last big thing usable.”`,
           name: "SHUBHAM PANDEY",
           bgColor: "rgba(152, 0, 101, 0.50)",
           designation: "UX UI DESIGNER",
@@ -471,6 +485,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Your old site is the best prototype of your new site”`,
           name: "DENISH RICH",
           bgColor: "rgba(254, 25, 56, 0.50)",
           designation: "UX UI DESIGNER",
@@ -478,6 +493,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Accessible design is good design.”`,
           name: "OVIYA",
           bgColor: "rgba(255, 72, 66, 0.50)",
           designation: "UX UI INTERN",
@@ -555,6 +571,7 @@ const content = {
       ],
       teamMembers: [
         {
+          slogan: `“Go with the flow”`,
           name: "YASH RAJ PACHORI",
           bgColor: "rgba(101, 1, 100, 0.50)",
           designation: "UX UI DESIGNER",
@@ -562,6 +579,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“The next big thing is the one that makes the last big thing usable.”`,
           name: "SHUBHAM PANDEY",
           bgColor: "rgba(152, 0, 101, 0.50)",
           designation: "UX UI DESIGNER",
@@ -569,6 +587,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Your old site is the best prototype of your new site”`,
           name: "DENISH RICH",
           bgColor: "rgba(254, 25, 56, 0.50)",
           designation: "UX UI DESIGNER",
@@ -576,6 +595,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Accessible design is good design.”`,
           name: "OVIYA",
           bgColor: "rgba(255, 72, 66, 0.50)",
           designation: "UX UI INTERN",
@@ -651,6 +671,7 @@ const content = {
       ],
       teamMembers: [
         {
+          slogan: `“Go with the flow”`,
           name: "YASH RAJ PACHORI",
           bgColor: "rgba(101, 1, 100, 0.50)",
           designation: "UX UI DESIGNER",
@@ -658,6 +679,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“The next big thing is the one that makes the last big thing usable.”`,
           name: "SHUBHAM PANDEY",
           bgColor: "rgba(152, 0, 101, 0.50)",
           designation: "UX UI DESIGNER",
@@ -665,6 +687,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Your old site is the best prototype of your new site”`,
           name: "DENISH RICH",
           bgColor: "rgba(254, 25, 56, 0.50)",
           designation: "UX UI DESIGNER",
@@ -672,6 +695,7 @@ const content = {
           id: "6e78b67b-7f5d-41f6-9ca4-9e2cdc1d66d5",
         },
         {
+          slogan: `“Accessible design is good design.”`,
           name: "OVIYA",
           bgColor: "rgba(255, 72, 66, 0.50)",
           designation: "UX UI INTERN",

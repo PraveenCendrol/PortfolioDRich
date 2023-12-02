@@ -188,23 +188,37 @@ export default function Work() {
           </h1>
         </section>
         <section className="work_all_project_section">
-          <div className="work_toggle_main_cont">
+          <div
+            className="work_toggle_main_cont"
+            style={
+              windowWidth < 600
+                ? {
+                    position: "sticky",
+                    top: 0,
+                    background: "#fff",
+                    paddingTop: "4rem",
+                  }
+                : {}
+            }
+          >
             <p className="work_all_project_text">All Projects</p>
-            <div className="work_toggleoption_cont">
-              <Toggler
-                // isActive={false}
-                isActive={activeToggle === "list"}
-                Svg={ListTogglerSvg}
-                value="list"
-                onClick={setActiveToggle}
-              />
-              <Toggler
-                isActive={activeToggle === "grid"}
-                onClick={setActiveToggle}
-                Svg={GridTogglerSvg}
-                value="grid"
-              />
-            </div>
+            {!(windowWidth < 600) && (
+              <div className="work_toggleoption_cont">
+                <Toggler
+                  // isActive={false}
+                  isActive={activeToggle === "list"}
+                  Svg={ListTogglerSvg}
+                  value="list"
+                  onClick={setActiveToggle}
+                />
+                <Toggler
+                  isActive={activeToggle === "grid"}
+                  onClick={setActiveToggle}
+                  Svg={GridTogglerSvg}
+                  value="grid"
+                />
+              </div>
+            )}
           </div>
           <div style={{ display: "flex" }}>
             <div
@@ -240,18 +254,20 @@ export default function Work() {
                 );
               })}
             </div>
-            <div
-              className="work_list_main_cont hover_section_list_cont"
-              style={{
-                alignItems: "flex-start",
-                margin: "20rem 0",
-                maxWidth: activeToggle === "grid" ? "100%" : "0",
-              }}
-            >
-              {content.projects.map((e) => (
-                <HoverItem data={e} windowWidth={windowWidth} key={e.id} />
-              ))}
-            </div>
+            {!(windowWidth < 600) && (
+              <div
+                className="work_list_main_cont hover_section_list_cont"
+                style={{
+                  alignItems: "flex-start",
+                  margin: "20rem 0",
+                  maxWidth: activeToggle === "grid" ? "100%" : "0",
+                }}
+              >
+                {content.projects.map((e) => (
+                  <HoverItem data={e} windowWidth={windowWidth} key={e.id} />
+                ))}
+              </div>
+            )}
           </div>
         </section>
       </main>

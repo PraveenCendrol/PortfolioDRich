@@ -37,6 +37,15 @@ interface SpecialContentList {
   para: string;
 }
 
+interface TeamMembersList {
+  name: string;
+  bgColor: string;
+  designation: string;
+  photo: any;
+  id: string;
+  slogan: string;
+}
+
 interface CurrentContent {
   id: string;
   link: string;
@@ -51,19 +60,28 @@ interface CurrentContent {
   liveapp: string;
   video: any;
   sections: [CurrentContentSection];
-  teamMembers: [
-    {
-      name: string;
-      bgColor: string;
-      designation: string;
-      photo: any;
-      id: string;
-    }
-  ];
+  teamMembers: [TeamMembersList];
 }
 interface Props {
   data: [SpecialContent];
 }
+
+export const ArrowRight = ({ size = 15, fill = "#000", ...props }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 15 15"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <path
+      d="M9 11.249L5.25 7.49902L9 3.74902L9.66563 4.41465L6.58125 7.49902L9.66563 10.5834L9 11.249Z"
+      fill={fill}
+    />
+  </svg>
+);
+
 export const SpecialContainer: React.FC<Props> = ({ data }) => {
   const position = {
     topLeft: "special_top_left",
@@ -179,6 +197,7 @@ export const SpecialContainer: React.FC<Props> = ({ data }) => {
 
 export default function ProjectDetails() {
   const [currentContent, setCurrentContent] = useState<CurrentContent | any>();
+  const [currentTeamIndex, setCurrentTeamIndex] = useState(0);
   const containerRef = useRef(null);
   const { pathname } = useLocation();
   console.log(pathname);
@@ -196,6 +215,20 @@ export default function ProjectDetails() {
     }
     !includes && navigate("/notFound", { replace: true });
   }, [id]);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // console.log(">>>>>", windowWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
     <main className="project_details_main_cont">
@@ -265,18 +298,26 @@ export default function ProjectDetails() {
               } else {
                 borderBottom = false;
               }
+              if (windowWidth < 600) {
+                borderBottom = false;
+              }
+
               return (
                 <div
                   key={e.title}
                   className={`project_details_pro_item ${
-                    e.align === "right" && "alignRight"
+                    !(windowWidth < 600) && e.align === "right" && "alignRight"
                   }`}
                 >
-                  {e.align === "left" && <div className="rightBorder" />}
+                  {(windowWidth < 600 || e.align === "left") && (
+                    <div className="rightBorder" />
+                  )}
                   {e.align === "left" && borderBottom && (
                     <div className="rightBottomBorder" />
                   )}
-                  {e.align === "right" && <div className="leftBorder" />}
+                  {!(windowWidth < 600) && e.align === "right" && (
+                    <div className="leftBorder" />
+                  )}
                   {e.align === "right" && borderBottom && (
                     <div className="leftBottomBorder" />
                   )}
@@ -299,21 +340,87 @@ export default function ProjectDetails() {
       <section className="project_details_team">
         <h2>Our Team</h2>
         <div className="project_details_team_list_cont">
-          {currentContent?.teamMembers.map((e) => {
-            return (
-              <div className="project_details_team_indi_cont">
-                <img src={e.photo} className="project_details_team_photo" />
-                <div
-                  className="project_details_indi_name_cont"
-                  style={{ background: e.bgColor }}
-                >
-                  <h3 className="project_details_indi_name">{e.name}</h3>
-                  <p className="project_details_indi_para">{e.designation}</p>
+          {windowWidth < 600 ? (
+            <div
+              className="projectDetails_team_list_mobile_main"
+              style={{ transform: ` translateX(${currentTeamIndex * -100}%)` }}
+            >
+              {currentContent?.teamMembers.map((e: TeamMembersList) => {
+                return (
+                  <div className={`project_details_team_mobile_cont`}>
+                    <img
+                      className="project_team_mobile_img"
+                      src={e.photo}
+                      alt=""
+                    />
+                    <div
+                      style={{
+                        marginLeft: "3rem",
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "space-between",
+                        padding: "5rem 0",
+                      }}
+                    >
+                      <p className="team_mob_slogan">{e.slogan}</p>
+                      <div>
+                        <h1 style={{ fontSize: "3rem" }}>{e.name}</h1>
+                        <p style={{ fontSize: "2.5rem" }}>{e.designation}</p>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            currentContent?.teamMembers.map((e: TeamMembersList, i: number) => {
+              return (
+                <div className="project_details_team_indi_cont">
+                  <img src={e.photo} className="project_details_team_photo" />
+                  <div
+                    className="project_details_indi_name_cont"
+                    style={{ background: e.bgColor }}
+                  >
+                    <h3 className="project_details_indi_name">{e.name}</h3>
+                    <p className="project_details_indi_para">{e.designation}</p>
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })
+          )}
         </div>
+        {windowWidth < 600 && (
+          <div className="team_mobile_btn_cont">
+            <div
+              onClick={() => {
+                setCurrentTeamIndex((e) => {
+                  if (e === 0) {
+                    return currentContent?.teamMembers.length - 1;
+                  }
+
+                  return e - 1;
+                });
+              }}
+              className="right_arrow"
+            >
+              <ArrowRight />
+            </div>
+            <div
+              onClick={() => {
+                setCurrentTeamIndex((e) => {
+                  if (e === currentContent?.teamMembers.length - 1) {
+                    return 0;
+                  }
+
+                  return e + 1;
+                });
+              }}
+              className="left_arrow"
+            >
+              <ArrowRight />
+            </div>
+          </div>
+        )}
       </section>
     </main>
   );

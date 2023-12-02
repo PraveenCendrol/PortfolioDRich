@@ -209,4 +209,18 @@
     position: relative;
     margin: 0 1rem;
   }
+  .footer_contact {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1rem 2rem;
+
+    border: 0px solid var(--logo-green);
+
+    mask: none;
+    -webkit-mask: none;
+    transition: 0.3s, -webkit-mask-position 0.3s 0.3s;
+  }
+  .footer_contact_cont:hover {
+    border-color: #fff;
+  }
 }

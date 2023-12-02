@@ -67,6 +67,20 @@ export default function About() {
     icanHelpItems,
   } = content.about;
   const [videoHover, setVideoHover] = useState(false);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  // console.log(">>>>>", windowWidth);
+
+  const handleResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   const changeVideoHoverState = () => {
     setVideoHover((e) => !e);
@@ -74,30 +88,40 @@ export default function About() {
 
   return (
     <>
-      <NavBar companyTextColor={videoHover ? "var(--menu-white)" : ""} />
+      <NavBar
+        companyTextColor={
+          windowWidth < 600 || videoHover ? "var(--menu-white)" : ""
+        }
+      />
       <video
         src={heroVideo}
         autoPlay={true}
         loop={true}
         muted
-        className={`about_hero_bg_video ${videoHover ? "video_opacity" : ""}`}
+        className={`about_hero_bg_video ${
+          windowWidth < 600 || videoHover ? "video_opacity" : ""
+        }`}
       />
       <section className="about_main_cont" id="about">
         <section
           id="about_main"
           className="about_hero_cont"
-          style={{ color: videoHover ? "var(--menu-white)" : "" }}
+          style={{
+            color: windowWidth < 600 || videoHover ? "var(--menu-white)" : "",
+          }}
         >
           <h1 className="about_hero_main_heading">{title}</h1>
-          <video
-            src={heroVideo}
-            autoPlay={true}
-            loop={true}
-            muted
-            className="about_hero_small_video"
-            onMouseEnter={changeVideoHoverState}
-            onMouseLeave={changeVideoHoverState}
-          />
+          {!(windowWidth < 600) && (
+            <video
+              src={heroVideo}
+              autoPlay={true}
+              loop={true}
+              muted
+              className="about_hero_small_video"
+              onMouseEnter={changeVideoHoverState}
+              onMouseLeave={changeVideoHoverState}
+            />
+          )}
         </section>
         <section id="about_ideologies" className="about_idea_main_cont">
           <div className="about_idea_top_head_cont">
