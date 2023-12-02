@@ -64,6 +64,7 @@ interface CurrentContent {
 }
 interface Props {
   data: [SpecialContent];
+  windowWidth: number;
 }
 
 export const ArrowRight = ({ size = 15, fill = "#000", ...props }) => (
@@ -82,7 +83,7 @@ export const ArrowRight = ({ size = 15, fill = "#000", ...props }) => (
   </svg>
 );
 
-export const SpecialContainer: React.FC<Props> = ({ data }) => {
+export const SpecialContainer: React.FC<Props> = ({ data, windowWidth }) => {
   const position = {
     topLeft: "special_top_left",
     bottomRight: "special_bottom_right",
@@ -96,36 +97,37 @@ export const SpecialContainer: React.FC<Props> = ({ data }) => {
     topRight: "headingTopRight",
     bottomLeft: "headingBottomLeft ",
   };
-  const [currentSelectedIndex, setCurrentSelectedIndex] = useState(0);
-  const [currentHover, setCurrentHover] = useState(0);
+  const [currentSelectedIndex, setCurrentSelectedIndex] = useState(1);
+  const [currentHover, setCurrentHover] = useState(2);
   console.log(currentSelectedIndex);
   return (
     <div className="special-container">
-      {data.map((e, i) => {
-        console.log(e.bgColor);
-        return (
-          <div
-            key={e.id}
-            onClick={() => setCurrentSelectedIndex(i)}
-            className={`special_clip_path  ${position[e.position]}`}
-          >
-            <p
-              className={`special_heading_gradiant ${
-                contentPosition[e.position]
-              }`}
-              style={{ opacity: i === currentSelectedIndex ? 1 : "" }}
-            >
-              {e.heading}
-            </p>
+      {!(windowWidth < 600) &&
+        data.map((e, i) => {
+          console.log(e.bgColor);
+          return (
             <div
-              className={`gradiant_clip_cont ${
-                currentSelectedIndex !== i && "clipzero"
-              }`}
-              style={{ background: e.bgColor }}
-            />
-          </div>
-        );
-      })}
+              key={e.id}
+              onClick={() => setCurrentSelectedIndex(i)}
+              className={`special_clip_path  ${position[e.position]}`}
+            >
+              <p
+                className={`special_heading_gradiant ${
+                  contentPosition[e.position]
+                }`}
+                style={{ opacity: i === currentSelectedIndex ? 1 : "" }}
+              >
+                {e.heading}
+              </p>
+              <div
+                className={`gradiant_clip_cont ${
+                  currentSelectedIndex !== i && "clipzero"
+                }`}
+                style={{ background: e.bgColor }}
+              />
+            </div>
+          );
+        })}
       <div className="special_content_main_cont">
         {data.map((e, i) => {
           return (
@@ -191,6 +193,54 @@ export const SpecialContainer: React.FC<Props> = ({ data }) => {
           );
         })}
       </div>
+      {windowWidth < 600 && (
+        <div className="special_btn_indi_cont">
+          <div className="spl_index_cont">
+            {data.map((e, i) => {
+              return (
+                <div
+                  className={`spl_ind_box ${
+                    i === currentSelectedIndex && "spl_ind_width"
+                  }`}
+                />
+              );
+            })}
+          </div>
+          <div
+            className="team_mobile_btn_cont"
+            style={{ position: "relative", right: 0, bottom: 0 }}
+          >
+            <div
+              onClick={() => {
+                setCurrentSelectedIndex((e) => {
+                  if (e === 0) {
+                    return data.length - 1;
+                  }
+
+                  return e - 1;
+                });
+              }}
+              className="right_arrow"
+            >
+              <ArrowRight />
+            </div>
+            <div
+              onClick={() => {
+                setCurrentSelectedIndex((e) => {
+                  if (e === data.length - 1) {
+                    return 0;
+                  }
+
+                  return e + 1;
+                });
+              }}
+              className="left_arrow"
+            >
+              <ArrowRight />
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
@@ -322,7 +372,10 @@ export default function ProjectDetails() {
                     <div className="leftBottomBorder" />
                   )}
                   {e.special ? (
-                    <SpecialContainer data={e.specialContent} />
+                    <SpecialContainer
+                      data={e.specialContent}
+                      windowWidth={windowWidth}
+                    />
                   ) : (
                     <>
                       <h1 className="project_details_item_heading">
