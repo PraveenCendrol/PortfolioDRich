@@ -99,12 +99,10 @@ export const SpecialContainer: React.FC<Props> = ({ data, windowWidth }) => {
   };
   const [currentSelectedIndex, setCurrentSelectedIndex] = useState(1);
   const [currentHover, setCurrentHover] = useState(2);
-  console.log(currentSelectedIndex);
   return (
     <div className="special-container">
       {!(windowWidth < 600) &&
         data.map((e, i) => {
-          console.log(e.bgColor);
           return (
             <div
               key={e.id}
@@ -250,12 +248,10 @@ export default function ProjectDetails() {
   const [currentTeamIndex, setCurrentTeamIndex] = useState(0);
   const containerRef = useRef(null);
   const { pathname } = useLocation();
-  console.log(pathname);
   const navigate = useNavigate();
   let { id } = useParams();
   useEffect(() => {
     let includes = false;
-    console.log(id);
     for (let i of content.projects) {
       if (i.id === id) {
         includes = true;
@@ -306,18 +302,20 @@ export default function ProjectDetails() {
               {currentContent?.category}
             </p>
           </div>
-          <div className="project_overview_items">
-            <h2 className="project_overview_head">LIVE APP</h2>
-            <div className="project_overview_line" />
-            <a
-              href={content?.liveapp}
-              target="_blank"
-              className="project_overview_content"
-              style={{ cursor: "pointer" }}
-            >
-              Click Here
-            </a>
-          </div>
+          {currentContent?.liveapp && (
+            <div className="project_overview_items">
+              <h2 className="project_overview_head">LIVE APP</h2>
+              <div className="project_overview_line" />
+              <a
+                href={currentContent?.liveapp}
+                target="_blank"
+                className="project_overview_content"
+                style={{ cursor: "pointer" }}
+              >
+                Click Here
+              </a>
+            </div>
+          )}
         </div>
       </section>
       <section className="project_details_imac">

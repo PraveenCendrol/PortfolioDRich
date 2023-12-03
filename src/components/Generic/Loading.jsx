@@ -34,7 +34,10 @@ export default function Loading({ loadingList = [], isMounted = false }) {
       <div className="loading_bullet" />
       {loadingList.map((e, i) => {
         return (
-          <h1 className={`loading_items ${index === i ? "opacityfull" : ""}`}>
+          <h1
+            key={`${e}${i}`}
+            className={`loading_items ${index === i ? "opacityfull" : ""}`}
+          >
             {e}
           </h1>
         );

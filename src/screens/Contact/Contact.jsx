@@ -82,7 +82,6 @@ export default function Contact() {
 
       if (!response.ok) {
         const errorMsg = await response.json();
-        console.log(">>>>", errorMsg.data.error);
         setError({
           isError: true,
           erroMsg: errorMsg.data.error,
@@ -100,7 +99,6 @@ export default function Contact() {
           "Your data has been regiestered successfully we will contact you soon",
         isSuc: true,
       });
-      console.log(responseData); // Log or handle the response data here
 
       setIsLoding(false);
     } catch (error) {

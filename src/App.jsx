@@ -10,6 +10,8 @@ import Contact from "./screens/Contact/Contact";
 import Work from "./screens/Work/Work";
 import NotFound from "./screens/NotFound/NotFound";
 import ProjectDetails from "./screens/ProjectDetails/ProjectDetails";
+import Login from "./screens/Login/Login";
+import AdminPanel from "./screens/AdminPanel/AdminPanel";
 let loadingListOptions = {
   "/": ["Hello", "வணக்கம்", "Hola", "你好", "привет", "olá", "नमस्ते"],
   "/work": ["Work"],
@@ -49,7 +51,7 @@ function App() {
     },
     [pathname]
   );
-  let skipPath = ["/about", "/work"];
+  let skipPath = ["/about", "/work", "/login", "/adminPanel"];
   return (
     <div>
       {isPathIncludes && (
@@ -66,6 +68,8 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/work" element={<Work />} />
         <Route path="/work/:id" element={<ProjectDetails />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/adminPanel" element={<AdminPanel />} />
       </Routes>
       {/\/work\//.test(pathname) || isPathIncludes ? <Footer /> : null}
     </div>

@@ -50,6 +50,7 @@ export default function HeroSection({ windowWidth }) {
         <h1>{content.heroContent}</h1>
         <ArrowLinkHover
           windowWidth={windowWidth}
+          link="/contact"
           additionalStyles={{ marginTop: "4.6rem" }}
           label="LET’S WORK TOGETHER"
         />

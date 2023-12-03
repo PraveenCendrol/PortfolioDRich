@@ -7,7 +7,12 @@ import { useLocation } from "react-router-dom";
 
 export const SocialMedia = ({ data = {} }) => {
   return (
-    <a className="social_media_main">
+    <a
+      href={data?.link}
+      target={data?.link}
+      className="social_media_main"
+      style={!data?.link ? { pointerEvents: "none" } : {}}
+    >
       <img className="social_medial_colored" src={data.color} alt={data.link} />
       <img className="social_media_stroke" src={data.stroke} alt={data.link} />
     </a>
@@ -110,7 +115,11 @@ export default function Footer() {
             </div>
           </div>
           {!(windowWidth < 600) && (
-            <ArrowLinkHover color="white" label="LET’S WORK TOGETHER" />
+            <ArrowLinkHover
+              link="/contact"
+              color="white"
+              label="LET’S WORK TOGETHER"
+            />
           )}
           <div
             onMouseEnter={onMouseEvent}
@@ -147,7 +156,7 @@ export default function Footer() {
           }}
         >
           {content.footerLogos.map((e) => (
-            <SocialMedia data={e} />
+            <SocialMedia key={e.id} data={e} />
           ))}
         </div>
       </div>

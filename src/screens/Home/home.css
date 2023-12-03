@@ -79,7 +79,7 @@
   top: -3rem;
 }
 .hero-base-logo:hover + .hero-colored-logo {
-  top: -5%;
+  top: -1%;
   opacity: 1;
 }
 

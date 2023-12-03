@@ -16,8 +16,8 @@ export default function HoverItem({ data, windowWidth }) {
       onMouseLeave={onHover}
       className="hover_items_main_cont"
       onClick={() => {
-        window.scrollTo(0, 0);
-        navigate(link || `/work/${id}`);
+        link && window.scrollTo(0, 0);
+        navigate(link);
       }}
     >
       <div className="hover_item_cont">

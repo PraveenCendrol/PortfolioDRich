@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 let transition = "all 1s cubic-bezier(0,1.02,0,1.12)";
 export const ArrowSvg = ({ size = 24, fill = "#1C1B1F", ...props }) => {
   return (
@@ -23,6 +24,7 @@ export default function ArrowLinkHover({
   label = "",
   additionalStyles = {},
   color = "black",
+  link = "",
 }) {
   const [mouse, setMouse] = useState(false);
   const onMouseEvent = () => {
@@ -44,14 +46,16 @@ export default function ArrowLinkHover({
       onMouseEnter={onMouseEvent}
       onMouseLeave={onMouseEvent}
     >
-      <a
+      <Link
+        to={link}
         style={{
           color: `${mouse ? "var(--logo-green)" : color}`,
           transition,
+          textDecoration: "none",
         }}
       >
         {label}
-      </a>
+      </Link>
       <ArrowSvg
         fill={mouse ? "var(--logo-green)" : color}
         style={{

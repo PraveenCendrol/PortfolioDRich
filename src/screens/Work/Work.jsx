@@ -237,7 +237,7 @@ export default function Work() {
                     className="work_list_title_cont worklist_hover"
                     onClick={() => {
                       navigate(e.link);
-                      window.scroll({ top: 0, behavior: "smooth" });
+                      e.link && window.scroll({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <p className="work_list_title_name list_item_head worklist_color">

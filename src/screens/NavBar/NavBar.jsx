@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 export default function NavBar({ companyTextColor }) {
   const { pathname } = useLocation();
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  console.log(">>>>>", windowWidth);
 
   const handleResize = () => {
     setWindowWidth(window.innerWidth);

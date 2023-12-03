@@ -40,6 +40,8 @@ export const SocialMediaItems = ({
   return (
     <div style={{ maxWidth: "max-content" }}>
       <a
+        href={data?.link}
+        target="_blank"
         onMouseEnter={mouseChange}
         onMouseLeave={mouseChange}
         className="social_items"

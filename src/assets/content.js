@@ -41,7 +41,7 @@ const content = {
   projects: [
     {
       id: "e74ac6fa-57ae-47e3-a036-137ab1d772a8",
-      link: "",
+      link: "/work/e74ac6fa-57ae-47e3-a036-137ab1d772a8",
       category: "UX & UI",
       projectHead: "SEAL DEAL",
       projectbrief:
@@ -50,7 +50,7 @@ const content = {
       img: crmsvg,
       year: "2023",
       client: "SALESTECH SOLUTIONS",
-      duration: "TWO MONTHS",
+      duration: "SIX MONTHS",
       liveapp: "",
       video: sealDeal,
       sections: [
@@ -155,7 +155,13 @@ const content = {
         {
           title: "RESULTS & ACHIEVEMENTS",
           align: "right",
-          content: `The "Partner App" yielded significant results, with lead management becoming 30% more efficient. Real-time construction monitoring increased client satisfaction and reduced project delays by 20%. Automated payment processing reduced errors, leading to a 15% boost in partner engagement.`,
+          content: `Quote Generation: Reduced quote generation time from 45 minutes to just 3 minutes, positioning SealTech Solutions as an agile market contender.
+           Efficient Meeting Calendar: The integrated Meeting Calendar set industry standards for efficiency, ensuring that sales teams maximized their opportunities.
+           Actionable Insights: Dynamic dashboards provided actionable insights, guiding informed decision-making. 
+           Improved Lead Identification: The CRM promptly identified digital marketing (DM) leads and recurring leads, accelerating closures. 
+           Seamless Integration: The CRM seamlessly integrated with existing apps, enhancing the overall user experience. 
+           Proper Data Capturing: The newly added activity section allowed for comprehensive data capture, providing valuable insights into user interactions and behaviors.
+`,
         },
         {
           title: "CONCLUSION",
@@ -204,7 +210,7 @@ const content = {
     },
     {
       id: "b7391abc-7ba8-4360-a386-8cfc99927e84",
-      link: "",
+      link: "/work/b7391abc-7ba8-4360-a386-8cfc99927e84",
       category: "UX & UI",
       projectHead: "RAHI",
       projectbrief:
@@ -304,7 +310,7 @@ const content = {
     },
     {
       id: "16dfab62-7189-4c9f-aecd-46728d715131",
-      link: "",
+      link: "/work/16dfab62-7189-4c9f-aecd-46728d715131",
       category: "UX & UI",
       projectHead: "BUILDHOME.CENDROL",
       projectbrief:
@@ -314,7 +320,7 @@ const content = {
       year: "2023",
       client: "CENDROL CONSTRUCTION",
       duration: "ONE MONTH",
-      liveapp: "",
+      liveapp: "https://buildhome.cendrol.com/",
       video: buildHome,
       sections: [
         {
@@ -404,7 +410,7 @@ const content = {
     },
     {
       id: "46df577a-d68c-4608-948b-b6f9d8b23e64",
-      link: "",
+      link: "/work/46df577a-d68c-4608-948b-b6f9d8b23e64",
       category: "UX & UI",
       projectHead: "PARTNER APPLICATION",
       projectbrief:
@@ -414,7 +420,7 @@ const content = {
       year: "2023",
       client: "SALESTECH SOLUTIONS",
       duration: "TWO MONTHS",
-      liveapp: "",
+      liveapp: "https://www.partner.cendrol.com/",
       video: partnerVideo,
       sections: [
         {
@@ -505,7 +511,6 @@ const content = {
     {
       id: "e74ac6fa-uebvn-47e3-a036-137ab1d772a8",
       link: "",
-
       category: "UX & UI",
       projectHead: "IT WEBSITE",
       projectbrief:
@@ -737,13 +742,13 @@ const content = {
     {
       id: "48637c62-o835-4aa9-9ca4-f907305f6449",
       label: "LinkedIn",
-      link: "",
+      link: "https://www.linkedin.com/in/denish-rich/",
       gradiant: "-webkit-linear-gradient(180deg, #5DB4E5 0%, #5985C7 100%)",
     },
     {
       id: "48637c62-a91d-4aa9-9ca4-f907305f6449",
       label: "Instagram",
-      link: "",
+      link: "https://www.instagram.com/deni_drifter_/",
       gradiant:
         "linear-gradient(94deg, #FEB80A 3.81%, #FEB00D 3.81%, #D43964 47.59%, #A229A8 89.16%)",
     },
@@ -769,13 +774,13 @@ const content = {
     {
       stroke: instagramStoke,
       color: instagramColor,
-      link: "",
+      link: "https://www.instagram.com/deni_drifter_/",
       id: "a59a67f0-5b9c-47bb-bca4-c14134d8f17b",
     },
     {
       stroke: linkedInStoke,
       color: linkedInColor,
-      link: "",
+      link: "https://www.linkedin.com/in/denish-rich/",
       id: "e72bf45d-acab-4d3e-824e-3f858c8702c9",
     },
     {

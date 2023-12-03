@@ -40,6 +40,11 @@ html {
     font-size: 7px;
   }
 }
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 6px;
+  }
+}
 @media screen and (max-width: 400px) {
   html {
     font-size: 5px;
