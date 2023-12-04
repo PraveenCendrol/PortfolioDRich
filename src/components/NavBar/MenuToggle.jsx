@@ -12,13 +12,23 @@ export const MenuItems = ({
 }) => {
   return (
     <div>
-      <Link
-        onClick={() => window.scrollTo(0, 0)}
-        to={data.link}
-        className="menu_list_items"
-      >
-        {data.label}
-      </Link>
+      {data?.isDownload ? (
+        <a
+          href={data?.isDownload ? data?.link : ""}
+          download={"resume"}
+          className="menu_list_items"
+        >
+          {data.label}
+        </a>
+      ) : (
+        <Link
+          onClick={() => window.scrollTo(0, 0)}
+          to={data?.link}
+          className="menu_list_items"
+        >
+          {data.label}
+        </Link>
+      )}
     </div>
   );
 };

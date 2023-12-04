@@ -23,6 +23,7 @@ import oviya from "./svgs/oviya.png";
 import rahiVideo from "./videos/rahiVideo.mp4";
 import buildHome from "./videos/buildHome.mp4";
 import sealDeal from "./videos/sealDeal.mp4";
+import resume from "./RICH_RESUME.pdf";
 
 const content = {
   name: "Rich",
@@ -734,7 +735,7 @@ const content = {
     {
       id: "2f4fbbb8-2242-4786-b5a2-0cdcb241bb5c",
       label: "Resume",
-      link: "/resume",
+      link: resume,
       isDownload: true,
     },
   ],
