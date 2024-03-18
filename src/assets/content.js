@@ -1,29 +1,25 @@
+import aboutPhoto from "../assets/svgs/aboutPhoto.jpg";
+import figmaColor from "../assets/svgs/figmaColor.svg";
+import figmaStroke from "../assets/svgs/figmaStroke.svg";
+import heroAvatar from "../assets/svgs/heroAvatar.svg";
 import baseLogo from "../assets/svgs/heroBaseLogo.svg";
 import herocoloredLogo from "../assets/svgs/heroColoredLogo.svg";
-import heroAvatar from "../assets/svgs/heroAvatar.svg";
 import instagramColor from "../assets/svgs/instagramColor.svg";
 import instagramStoke from "../assets/svgs/instagramStoke.svg";
 import linkedInColor from "../assets/svgs/linkedInColor.svg";
 import linkedInStoke from "../assets/svgs/linkedInStoke.svg";
-import figmaColor from "../assets/svgs/figmaColor.svg";
-import figmaStroke from "../assets/svgs/figmaStroke.svg";
 import aboutHeroVideo from "../assets/videos/aboutVideo.mp4";
-import aboutPhoto from "../assets/svgs/aboutPhoto.png";
-import rahisvg from "./svgs/rahi.svg";
-import crmsvg from "./svgs/crmsvg.svg";
-import buildhomesvg from "./svgs/buildhome.svg";
-import partnersvg from "./svgs/partner.svg";
-import itwebsvg from "./svgs/itweb.svg";
-import richSvg from "./svgs/richSvg.svg";
-import partnerVideo from "./videos/partnerIntro.mp4";
-import yash from "./svgs/yash.png";
-import shubam from "./svgs/shubam.png";
-import richphoto from "./svgs/richphoto.png";
-import oviya from "./svgs/oviya.png";
-import rahiVideo from "./videos/rahiVideo.mp4";
-import buildHome from "./videos/buildHome.mp4";
-import sealDeal from "./videos/sealDeal.mp4";
 import resume from "./RICH_RESUME.pdf";
+import buildhomesvg from "./svgs/buildhome.svg";
+import crmsvg from "./svgs/crmsvg.svg";
+import itwebsvg from "./svgs/itweb.svg";
+import oviya from "./svgs/oviya.png";
+import partnersvg from "./svgs/partner.svg";
+import rahisvg from "./svgs/rahi.svg";
+import richSvg from "./svgs/richSvg.svg";
+import richphoto from "./svgs/richphoto.png";
+import shubam from "./svgs/shubam.png";
+import yash from "./svgs/yash.png";
 
 const content = {
   name: "Rich",
@@ -44,16 +40,16 @@ const content = {
       id: "e74ac6fa-57ae-47e3-a036-137ab1d772a8",
       link: "/work/e74ac6fa-57ae-47e3-a036-137ab1d772a8",
       category: "UX & UI",
-      projectHead: "SEAL DEAL",
+      projectHead: "CRM",
       projectbrief:
         "Designing “Seal Deal” CRM for  Enhanced User Experience and Data Capture",
       use: "CRM for Data Capture.",
       img: crmsvg,
       year: "2023",
-      client: "SALESTECH SOLUTIONS",
+      client: "CLIENT X",
       duration: "SIX MONTHS",
       liveapp: "",
-      video: sealDeal,
+      // video: sealDeal,
       sections: [
         {
           title: "INTRODUCTION",
@@ -128,29 +124,29 @@ const content = {
           ],
           content: "",
         },
-        {
-          title: "DESIGN PROCESS",
-          align: "left",
-          content: `To address these challenges, the design process focused on creating an interface that is user-friendly, modern, and intuitive for both partners and clients. The primary goals were to streamline lead management, client monitoring, and payment processing, ensuring a seamless and efficient user experience. The ultimate aim was to enhance partner engagement and revenue generation for the construction company.`,
-        },
-        {
-          title: "DESIGN GOALS",
-          align: "right",
-          content: `Our design goals were closely aligned with the client's overarching objectives. We aimed to create a visually stunning and user-friendly interfaces, streamlined lead management, efficient client monitoring, enhanced user experience, partner engagement and scalability.`,
-        },
-        {
-          title: "WIREFRAMING AND PROTOTYPING",
-          align: "left",
-          content: `The design journey began with wireframing to lay out the app's structure and functionalities, followed by the creation of prototypes to visualize user interactions and gather feedback from stakeholders.`,
-        },
-        {
-          title: "UI DESIGN",
-          align: "left",
-          content: `The UI design prioritized clarity and ease of use. Notable design elements included color-coded lead classification (hot, warm, cold), real-time construction progress tracking with interactive timelines and progress bars, and an intuitive payment flow with a detailed transaction history.`,
-        },
+        // {
+        //   title: "DESIGN PROCESS",
+        //   align: "left",
+        //   content: `To address these challenges, the design process focused on creating an interface that is user-friendly, modern, and intuitive for both partners and clients. The primary goals were to streamline lead management, client monitoring, and payment processing, ensuring a seamless and efficient user experience. The ultimate aim was to enhance partner engagement and revenue generation for the construction company.`,
+        // },
+        // {
+        //   title: "DESIGN GOALS",
+        //   align: "right",
+        //   content: `Our design goals were closely aligned with the client's overarching objectives. We aimed to create a visually stunning and user-friendly interfaces, streamlined lead management, efficient client monitoring, enhanced user experience, partner engagement and scalability.`,
+        // },
+        // {
+        //   title: "WIREFRAMING AND PROTOTYPING",
+        //   align: "left",
+        //   content: `The design journey began with wireframing to lay out the app's structure and functionalities, followed by the creation of prototypes to visualize user interactions and gather feedback from stakeholders.`,
+        // },
+        // {
+        //   title: "UI DESIGN",
+        //   align: "left",
+        //   content: `The UI design prioritized clarity and ease of use. Notable design elements included color-coded lead classification (hot, warm, cold), real-time construction progress tracking with interactive timelines and progress bars, and an intuitive payment flow with a detailed transaction history.`,
+        // },
         {
           title: "INTERACTING THE NEW FEATURES",
-          align: "right",
+          align: "left",
           content: `In response to user feedback and industry trends, several additional features were introduced, such as real-time messaging for partners and clients to enhance collaboration, document sharing for easier information exchange, and an analytics dashboard for partners to access data on lead conversion rates and earnings.`,
         },
         {
@@ -166,7 +162,7 @@ const content = {
         },
         {
           title: "CONCLUSION",
-          align: "right",
+          align: "left",
           content: `The "Partner App" has transformed the construction company's operations, making lead management, client monitoring, and partner engagement more efficient. It underscores the company's commitment to innovation and client satisfaction, further solidifying its reputation as an industry leader. This case study reflects your ability to design and develop solutions that address real-world business challenges and deliver tangible benefits.`,
         },
         // {
@@ -213,16 +209,16 @@ const content = {
       id: "b7391abc-7ba8-4360-a386-8cfc99927e84",
       link: "/work/b7391abc-7ba8-4360-a386-8cfc99927e84",
       category: "UX & UI",
-      projectHead: "RAHI",
+      projectHead: "INTERIORS LANDING PAGE",
       projectbrief:
         "Designed landing page for Interior Designers, Who Turns Dreams Into Reality",
       use: "Explore the Artistry of interior Design.",
       img: rahisvg,
       year: "2023",
-      client: "RAHI INTERIOR DESIGNERS",
+      client: "CLIENT X",
       duration: "THREE WEEKS",
       liveapp: "",
-      video: rahiVideo,
+      // video: rahiVideo,
       sections: [
         {
           title: "INTRODUCTION",
@@ -244,16 +240,16 @@ const content = {
           align: "right",
           content: `Our design goals were closely aligned with the client's overarching objectives. We aimed to create a visually stunning and user-friendly landing page that would not only accurately represent the company's brand but also contribute to a significant increase in client acquisition and online presence.`,
         },
-        {
-          title: "WIREFRAMING AND PROTOTYPING",
-          align: "left",
-          content: `Wireframing the layout of the landing page was a critical step in the project, enabling us to structure content and user interface effectively. Prototyping allowed us to visualize the design in action and iterate to improve the layout based on feedback.`,
-        },
-        {
-          title: "UI DESIGN",
-          align: "left",
-          content: `The UI design phase was characterized by the careful selection of color schemes, typography, imagery, and overall aesthetics. Every design choice was made with the client's branding guidelines in mind, ensuring visual consistency. This phase was pivotal in crafting a landing page that would resonate with the company's target audience.`,
-        },
+        // {
+        //   title: "WIREFRAMING AND PROTOTYPING",
+        //   align: "left",
+        //   content: `Wireframing the layout of the landing page was a critical step in the project, enabling us to structure content and user interface effectively. Prototyping allowed us to visualize the design in action and iterate to improve the layout based on feedback.`,
+        // },
+        // {
+        //   title: "UI DESIGN",
+        //   align: "left",
+        //   content: `The UI design phase was characterized by the careful selection of color schemes, typography, imagery, and overall aesthetics. Every design choice was made with the client's branding guidelines in mind, ensuring visual consistency. This phase was pivotal in crafting a landing page that would resonate with the company's target audience.`,
+        // },
         {
           title: "INTERACTING THE NEW FEATURES",
           align: "right",
@@ -261,14 +257,14 @@ const content = {
         },
         {
           title: "RESULTS & ACHIEVEMENTS",
-          align: "right",
+          align: "left",
           content: `Following the implementation of the landing page, the interior design company witnessed remarkable results. Metrics and data demonstrated a substantial increase in client acquisition compared to the previous months. Success stories and client testimonials further underscored the positive impact of the landing page on the company's business.`,
         },
-        {
-          title: "CONCLUSION",
-          align: "right",
-          content: `In conclusion, the "Rahi" landing page project not only met the initial objectives but exceeded them. It successfully addressed the challenges faced by the interior design company, significantly improving its online presence and client engagement. This project stands as a testament to the effective collaboration between our team and the client and serves as a valuable addition to our portfolio. As we look ahead, we see opportunities for further enhancements to continually improve the client's online presence and increase their customer base`,
-        },
+        // {
+        //   title: "CONCLUSION",
+        //   align: "left",
+        //   content: `In conclusion, the "Rahi" landing page project not only met the initial objectives but exceeded them. It successfully addressed the challenges faced by the interior design company, significantly improving its online presence and client engagement. This project stands as a testament to the effective collaboration between our team and the client and serves as a valuable addition to our portfolio. As we look ahead, we see opportunities for further enhancements to continually improve the client's online presence and increase their customer base`,
+        // },
         // {
         //   title: "",
         //   content: ``,
@@ -313,16 +309,16 @@ const content = {
       id: "16dfab62-7189-4c9f-aecd-46728d715131",
       link: "/work/16dfab62-7189-4c9f-aecd-46728d715131",
       category: "UX & UI",
-      projectHead: "BUILDHOME.CENDROL",
+      projectHead: "CONSTRUCTION LANDING PAGE",
       projectbrief:
         "Designed landing page For Company Who Build Dreams. With Passion & Precision",
       use: "Turning Vision For Dream Home Into Reality.",
       img: buildhomesvg,
       year: "2023",
-      client: "CENDROL CONSTRUCTION",
+      client: "CLIENT X",
       duration: "ONE MONTH",
-      liveapp: "https://buildhome.cendrol.com/",
-      video: buildHome,
+      liveapp: "",
+      // video: buildHome,
       sections: [
         {
           title: "INTRODUCTION",
@@ -344,16 +340,16 @@ const content = {
           align: "right",
           content: `Our design goals were closely aligned with the client's overarching objectives. These included creating a visually appealing and user-friendly landing page that would not only represent the company's brand effectively but also contribute to the increase in client acquisition and online presence.`,
         },
-        {
-          title: "WIREFRAMING AND PROTOTYPING",
-          align: "left",
-          content: `Wireframing the layout of the landing page was a critical step in the project, allowing us to structure the content and interface effectively. Prototyping facilitated the visualization of the design in action and enabled us to iterate and improve the layout based on feedback.`,
-        },
-        {
-          title: "UI DESIGN",
-          align: "left",
-          content: `The UI design phase was characterized by careful selection of color schemes, typography, imagery, and overall aesthetics. Every design choice was made with the client's branding guidelines in mind to ensure visual consistency. This phase was critical in crafting a landing page that would resonate with the company's target audience.`,
-        },
+        // {
+        //   title: "WIREFRAMING AND PROTOTYPING",
+        //   align: "left",
+        //   content: `Wireframing the layout of the landing page was a critical step in the project, allowing us to structure the content and interface effectively. Prototyping facilitated the visualization of the design in action and enabled us to iterate and improve the layout based on feedback.`,
+        // },
+        // {
+        //   title: "UI DESIGN",
+        //   align: "left",
+        //   content: `The UI design phase was characterized by careful selection of color schemes, typography, imagery, and overall aesthetics. Every design choice was made with the client's branding guidelines in mind to ensure visual consistency. This phase was critical in crafting a landing page that would resonate with the company's target audience.`,
+        // },
         {
           title: "INTERACTING THE NEW FEATURES",
           align: "right",
@@ -361,14 +357,14 @@ const content = {
         },
         {
           title: "RESULTS & ACHIEVEMENTS",
-          align: "right",
+          align: "left",
           content: `Following the implementation of the landing page, the construction company witnessed remarkable results. Metrics and data demonstrated a substantial increase in client acquisition compared to the previous months. Success stories and client testimonials further underscored the positive impact of the landing page on the company's business.`,
         },
-        {
-          title: "CONCLUSION",
-          align: "right",
-          content: `In conclusion, the "Build Home" landing page project not only met the initial objectives but exceeded them. It successfully addressed the challenges faced by the construction company, significantly improving its online presence and client engagement. The project's achievements stand as a testament to the effective collaboration between our team and the client, and it serves as a valuable addition to our portfolio. Looking forward, we see opportunities for further enhancements to continually improve the client's online presence and increase their customer base.`,
-        },
+        // {
+        //   title: "CONCLUSION",
+        //   align: "right",
+        //   content: `In conclusion, the "Build Home" landing page project not only met the initial objectives but exceeded them. It successfully addressed the challenges faced by the construction company, significantly improving its online presence and client engagement. The project's achievements stand as a testament to the effective collaboration between our team and the client, and it serves as a valuable addition to our portfolio. Looking forward, we see opportunities for further enhancements to continually improve the client's online presence and increase their customer base.`,
+        // },
         // {
         //   title: "",
         //   content: ``,
@@ -419,10 +415,10 @@ const content = {
       use: "Unlocking Success Together.",
       img: partnersvg,
       year: "2023",
-      client: "SALESTECH SOLUTIONS",
+      client: "CLIENT X",
       duration: "TWO MONTHS",
-      liveapp: "https://www.partner.cendrol.com/",
-      video: partnerVideo,
+      liveapp: "",
+      // video: partnerVideo,
       sections: [
         {
           title: "INTRODUCTION",
@@ -434,26 +430,26 @@ const content = {
           align: "right",
           content: `This project was born out of several key challenges faced by the construction company. These challenges included the efficient management and classification of leads, real-time tracking of construction progress for each client, and the need for a more automated and error-free payment processing system. User experience was also a paramount concern, requiring a user-friendly and intuitive design.`,
         },
-        {
-          title: "DESIGN PROCESS",
-          align: "left",
-          content: `To address these challenges, the design process focused on creating an interface that is user-friendly, modern, and intuitive for both partners and clients. The primary goals were to streamline lead management, client monitoring, and payment processing, ensuring a seamless and efficient user experience. The ultimate aim was to enhance partner engagement and revenue generation for the construction company.`,
-        },
+        // {
+        //   title: "DESIGN PROCESS",
+        //   align: "left",
+        //   content: `To address these challenges, the design process focused on creating an interface that is user-friendly, modern, and intuitive for both partners and clients. The primary goals were to streamline lead management, client monitoring, and payment processing, ensuring a seamless and efficient user experience. The ultimate aim was to enhance partner engagement and revenue generation for the construction company.`,
+        // },
         {
           title: "DESIGN GOALS",
           align: "right",
           content: `Our design goals were closely aligned with the client's overarching objectives. We aimed to create a visually stunning and user-friendly interfaces, streamlined lead management, efficient client monitoring, enhanced user experience, partner engagement and scalability.`,
         },
-        {
-          title: "WIREFRAMING AND PROTOTYPING",
-          align: "left",
-          content: `The design journey began with wireframing to lay out the app's structure and functionalities, followed by the creation of prototypes to visualize user interactions and gather feedback from stakeholders.`,
-        },
-        {
-          title: "UI DESIGN",
-          align: "left",
-          content: `The UI design prioritized clarity and ease of use. Notable design elements included color-coded lead classification (hot, warm, cold), real-time construction progress tracking with interactive timelines and progress bars, and an intuitive payment flow with a detailed transaction history.`,
-        },
+        // {
+        //   title: "WIREFRAMING AND PROTOTYPING",
+        //   align: "left",
+        //   content: `The design journey began with wireframing to lay out the app's structure and functionalities, followed by the creation of prototypes to visualize user interactions and gather feedback from stakeholders.`,
+        // },
+        // {
+        //   title: "UI DESIGN",
+        //   align: "left",
+        //   content: `The UI design prioritized clarity and ease of use. Notable design elements included color-coded lead classification (hot, warm, cold), real-time construction progress tracking with interactive timelines and progress bars, and an intuitive payment flow with a detailed transaction history.`,
+        // },
         {
           title: "INTERACTING THE NEW FEATURES",
           align: "right",
@@ -461,14 +457,14 @@ const content = {
         },
         {
           title: "RESULTS & ACHIEVEMENTS",
-          align: "right",
+          align: "left",
           content: `The "Partner App" yielded significant results, with lead management becoming 30% more efficient. Real-time construction monitoring increased client satisfaction and reduced project delays by 20%. Automated payment processing reduced errors, leading to a 15% boost in partner engagement.`,
         },
-        {
-          title: "CONCLUSION",
-          align: "right",
-          content: `The "Partner App" has transformed the construction company's operations, making lead management, client monitoring, and partner engagement more efficient. It underscores the company's commitment to innovation and client satisfaction, further solidifying its reputation as an industry leader. This case study reflects your ability to design and develop solutions that address real-world business challenges and deliver tangible benefits.`,
-        },
+        // {
+        //   title: "CONCLUSION",
+        //   align: "right",
+        //   content: `The "Partner App" has transformed the construction company's operations, making lead management, client monitoring, and partner engagement more efficient. It underscores the company's commitment to innovation and client satisfaction, further solidifying its reputation as an industry leader. This case study reflects your ability to design and develop solutions that address real-world business challenges and deliver tangible benefits.`,
+        // },
         // {
         //   title: "",
         //   content: ``,
@@ -513,17 +509,17 @@ const content = {
       id: "e74ac6fa-uebvn-47e3-a036-137ab1d772a8",
       link: "",
       category: "UX & UI",
-      projectHead: "IT WEBSITE",
+      projectHead: "DESIGN SYSTEM",
       projectbrief:
         "CULTIVATING INNOVATION, GATEWAY TO COLLABORATE WITH BRILLIANT MINDS",
       use: "Gateway To Meet Brilliant Minds.",
       img: itwebsvg,
       year: "2023",
       extraBtn: "Coming Soon",
-      client: "SALESTECH SOLUTIONS",
+      client: "CLIENT X",
       duration: "TWO MONTHS",
       liveapp: "",
-      video: partnerVideo,
+      // video: partnerVideo,
       sections: [
         {
           title: "INTRODUCTION",
@@ -620,10 +616,10 @@ const content = {
       use: "To Find IDEAS, Find PROBLEMS.",
       img: richSvg,
       year: "2023",
-      client: "SALESTECH SOLUTIONS",
+      client: "CLIENT X",
       duration: "TWO MONTHS",
       liveapp: "",
-      video: partnerVideo,
+      // video: partnerVideo,
       sections: [
         {
           title: "INTRODUCTION",
@@ -727,11 +723,11 @@ const content = {
       label: "About",
       link: "/about",
     },
-    {
-      id: "0efe4df8-6e36-4657-a5e6-cc617023f664",
-      label: "Contact",
-      link: "/contact",
-    },
+    // {
+    //   id: "0efe4df8-6e36-4657-a5e6-cc617023f664",
+    //   label: "Contact",
+    //   link: "/contact",
+    // },
     {
       id: "2f4fbbb8-2242-4786-b5a2-0cdcb241bb5c",
       label: "Resume",
@@ -815,7 +811,7 @@ const content = {
       {
         id: "58822a64-5fc7-4eaf-ferg-ed3ec4fb6afe",
         no: "03",
-        title: "The full package",
+        title: "Complete Project",
         desc: "Complete project from concept to final design, that’s what makes me stand out. My great sense of design skills enable me to create superlative projects.  ",
       },
     ],

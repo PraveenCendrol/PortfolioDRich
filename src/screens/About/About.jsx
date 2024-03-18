@@ -98,9 +98,8 @@ export default function About() {
         autoPlay={true}
         loop={true}
         muted
-        className={`about_hero_bg_video ${
-          windowWidth < 600 || videoHover ? "video_opacity" : ""
-        }`}
+        className={`about_hero_bg_video ${windowWidth < 600 || videoHover ? "video_opacity" : ""
+          }`}
       />
       <section className="about_main_cont" id="about">
         <section
@@ -142,7 +141,7 @@ export default function About() {
         </section>
         <section id="icanhelpyou" className="icanhelp_main_cont">
           <h1 className="idea_ican_text">
-            I can help you with <Loader />
+            I can work on <Loader />
           </h1>
           <div className="ican_desc_main_cont">
             {icanHelpItems.map((e) => (

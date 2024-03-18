@@ -1,9 +1,7 @@
+import React, { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-import "./projectdetails.css";
-import { useEffect, useRef, useState } from "react";
 import content from "../../assets/content";
-import imac from "../../assets/svgs/yellow.png";
-import React from "react";
+import "./projectdetails.css";
 
 interface CurrentContentSection {
   title: string;
@@ -110,17 +108,15 @@ export const SpecialContainer: React.FC<Props> = ({ data, windowWidth }) => {
               className={`special_clip_path  ${position[e.position]}`}
             >
               <p
-                className={`special_heading_gradiant ${
-                  contentPosition[e.position]
-                }`}
+                className={`special_heading_gradiant ${contentPosition[e.position]
+                  }`}
                 style={{ opacity: i === currentSelectedIndex ? 1 : "" }}
               >
                 {e.heading}
               </p>
               <div
-                className={`gradiant_clip_cont ${
-                  currentSelectedIndex !== i && "clipzero"
-                }`}
+                className={`gradiant_clip_cont ${currentSelectedIndex !== i && "clipzero"
+                  }`}
                 style={{ background: e.bgColor }}
               />
             </div>
@@ -131,9 +127,8 @@ export const SpecialContainer: React.FC<Props> = ({ data, windowWidth }) => {
           return (
             <div className="special_overall_main">
               <div
-                className={`special_content_head_cont ${
-                  currentSelectedIndex === i && "special_height"
-                }`}
+                className={`special_content_head_cont ${currentSelectedIndex === i && "special_height"
+                  }`}
               >
                 <div
                   style={{
@@ -147,9 +142,8 @@ export const SpecialContainer: React.FC<Props> = ({ data, windowWidth }) => {
               </div>
 
               <div
-                className={`special_content_desc_cont ${
-                  currentSelectedIndex === i && "special_width"
-                }`}
+                className={`special_content_desc_cont ${currentSelectedIndex === i && "special_width"
+                  }`}
               >
                 {!e.isDifferent ? (
                   <p className={`special_content_desc `}>{e.desc}</p>
@@ -177,9 +171,8 @@ export const SpecialContainer: React.FC<Props> = ({ data, windowWidth }) => {
                     </div>
                     {e.contentList?.map((e, i) => (
                       <div
-                        className={`specail_different_inner_para_cont ${
-                          currentHover === i && "special_inner_height"
-                        }`}
+                        className={`specail_different_inner_para_cont ${currentHover === i && "special_inner_height"
+                          }`}
                       >
                         <p className="specail_different_inner_para">{e.para}</p>
                       </div>
@@ -197,9 +190,8 @@ export const SpecialContainer: React.FC<Props> = ({ data, windowWidth }) => {
             {data.map((e, i) => {
               return (
                 <div
-                  className={`spl_ind_box ${
-                    i === currentSelectedIndex && "spl_ind_width"
-                  }`}
+                  className={`spl_ind_box ${i === currentSelectedIndex && "spl_ind_width"
+                    }`}
                 />
               );
             })}
@@ -318,7 +310,7 @@ export default function ProjectDetails() {
           )}
         </div>
       </section>
-      <section className="project_details_imac">
+      {/* <section className="project_details_imac">
         <img
           src={imac}
           className="project_details_imac_mockup"
@@ -330,7 +322,7 @@ export default function ProjectDetails() {
           src={currentContent?.video}
           className="project_details_video"
         />
-      </section>
+      </section> */}
       <section
       // className="project_details_por_expl_main_cont"
       >
@@ -353,9 +345,8 @@ export default function ProjectDetails() {
               return (
                 <div
                   key={e.title}
-                  className={`project_details_pro_item ${
-                    !(windowWidth < 600) && e.align === "right" && "alignRight"
-                  }`}
+                  className={`project_details_pro_item ${!(windowWidth < 600) && e.align === "right" && "alignRight"
+                    }`}
                 >
                   {(windowWidth < 600 || e.align === "left") && (
                     <div className="rightBorder" />

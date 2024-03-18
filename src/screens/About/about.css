@@ -1,11 +1,13 @@
 .about_main_cont {
   min-height: 90vh;
 }
+
 .about_hero_cont {
   padding: 16rem 8rem;
   position: relative;
   height: 70vh;
 }
+
 .about_hero_main_heading {
   font-size: 10rem;
   max-width: 80%;
@@ -24,9 +26,11 @@
   opacity: 0;
   /* display: none; */
 }
+
 .video_opacity {
   opacity: 1;
 }
+
 .about_hero_small_video {
   position: absolute;
   bottom: -3rem;
@@ -39,10 +43,12 @@
   border: 1px solid rgba(164, 164, 164, 0.56);
   padding: 0.3rem;
 }
+
 .about_idea_main_cont {
   padding: 8rem;
   background-color: var(--bg-grey);
 }
+
 .idea_head_text {
   font-family: EuclidSquareRegular;
   font-size: 3rem;
@@ -61,58 +67,68 @@
 .about_photo_cont {
   display: flex;
   width: 100%;
+
 }
 
 .about_photo {
   flex-grow: 1;
   margin-left: 2.4rem;
-  object-fit: cover;
-  height: 166rem;
+  object-fit: contain;
+  height: 100rem;
+
 }
 
 .idea_ican_text {
   font-size: 8rem;
   margin: 8rem 0;
 }
+
 .icanhelp_main_cont {
   padding: 0 8rem;
 }
+
 .ican_desc_main_cont {
   display: flex;
   margin-bottom: 8rem;
   justify-content: space-between;
 }
+
 .ican_desc_cont {
   width: 33%;
   /* background-color: red; */
   margin-right: 8rem;
 }
+
 .ican_head_no {
   color: #7e7e7e;
   font-size: 3rem;
   font-family: EuclidSquareRegular;
 }
+
 .ican_divider_line {
   height: 1px;
   width: 100%;
   background-color: #bcbcbc;
   margin-top: 4rem;
 }
+
 .ican_sub_head {
   font-family: EuclidSquareRegular;
   font-size: 4rem;
   margin-top: 6rem;
   margin-bottom: 4rem;
 }
+
 .ican_main_desc {
   color: #7e7e7e;
   font-family: EuclidSquareRegular;
   font-size: 2rem;
-  line-height: 150%; /* 30px */
+  line-height: 150%;
+  /* 30px */
 }
 
-.loadingMain {
-}
+.loadingMain {}
+
 .threedot-load {
   display: inline-block;
   height: 0.6rem;
@@ -122,69 +138,83 @@
   opacity: 0;
   transition: all 1s ease;
 }
+
 .threedot-visible {
   opacity: 1;
 }
+
 @media screen and (max-width: 600px) {
   .about_hero_bg_video {
     width: 100vw;
     height: 24rem;
   }
+
   .about_hero_cont {
     padding: 4rem 2rem;
 
     height: 17rem;
   }
+
   .about_hero_main_heading {
     font-size: 4rem;
     max-width: 80%;
     transition: all 0.5s ease;
   }
+
   .about_idea_main_cont {
     padding: 2rem;
   }
+
   .idea_head_text {
     font-size: 3rem;
     width: 90vw;
   }
+
   .about_photo_cont {
     display: flex;
     flex-direction: column-reverse;
     width: 100%;
   }
+
   .about_photo {
     flex-grow: 0;
-
     height: 44rem;
     width: 25rem;
     align-self: flex-end;
   }
+
   .idea_head_text {
     margin-top: 5rem;
     font-size: 2.5rem;
     align-self: flex-start !important;
   }
+
   .icanhelp_main_cont {
     padding: 0 2rem;
   }
+
   .idea_ican_text {
     font-size: 3rem;
     margin: 3rem 0;
   }
+
   .ican_desc_main_cont {
     flex-direction: column;
 
     justify-content: flex-start;
   }
+
   .ican_desc_cont {
     width: 100%;
     /* background-color: red; */
     margin-bottom: 5rem;
     margin-right: 8rem;
   }
+
   .ican_divider_line {
     margin-top: 1rem;
   }
+
   .ican_sub_head {
     margin-top: 2rem;
     margin-bottom: 2rem;
