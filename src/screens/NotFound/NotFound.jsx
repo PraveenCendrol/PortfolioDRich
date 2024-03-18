@@ -1,8 +1,7 @@
-import "./notfound.css";
-import notFound from "../../assets/svgs/notfoundSvg.svg";
-import content from "../../assets/content";
-import { ArrowSvg } from "../../components/Generic/ArrowLinkHover";
 import { useNavigate } from "react-router-dom";
+import notFound from "../../assets/svgs/notfoundSvg.svg";
+import { ArrowSvg } from "../../components/Generic/ArrowLinkHover";
+import "./notfound.css";
 export default function NotFound() {
   const navigate = useNavigate();
   return (

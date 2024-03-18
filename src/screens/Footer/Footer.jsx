@@ -116,9 +116,9 @@ export default function Footer() {
           </div>
           {!(windowWidth < 600) && (
             <ArrowLinkHover
-              link="/contact"
+              link="/about"
               color="white"
-              label="LET’S WORK TOGETHER"
+              label="KNOW MORE ABOUT ME"
             />
           )}
           <div
@@ -130,9 +130,8 @@ export default function Footer() {
             className="top_main_cont"
           >
             <div
-              className={`top_bottom ${
-                mouse ? "" : "maxWidthFooter colorWhiteTop"
-              }`}
+              className={`top_bottom ${mouse ? "" : "maxWidthFooter colorWhiteTop"
+                }`}
             >
               TOP
             </div>

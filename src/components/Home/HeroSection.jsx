@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import content from "../../assets/content";
-import ArrowLinkHover from "../Generic/ArrowLinkHover";
 import clickHere from "../../assets/svgs/clickHere.svg";
 import hoverHere from "../../assets/svgs/hoverHere.svg";
 import tracer from "../../assets/svgs/tracer.svg";
+import ArrowLinkHover from "../Generic/ArrowLinkHover";
 export default function HeroSection({ windowWidth }) {
   const [imageVisible, setImageVisible] = useState(false);
   const [hover, setHover] = useState(false);
@@ -50,9 +50,9 @@ export default function HeroSection({ windowWidth }) {
         <h1>{content.heroContent}</h1>
         <ArrowLinkHover
           windowWidth={windowWidth}
-          link="/contact"
+          link="/about"
           additionalStyles={{ marginTop: "4.6rem" }}
-          label="LET’S WORK TOGETHER"
+          label="KNOW MORE ABOUT ME"
         />
       </div>
       {windowWidth > 600 && (
