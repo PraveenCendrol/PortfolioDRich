@@ -507,7 +507,7 @@ const content = {
     },
     {
       id: "e74ac6fa-uebvn-47e3-a036-137ab1d772a8",
-      link: "",
+      link: "https://www.figma.com/@rich07",
       category: "UX & UI",
       projectHead: "DESIGN SYSTEM",
       projectbrief:
